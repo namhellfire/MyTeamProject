@@ -4,24 +4,20 @@
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/layout/design_layout_snackbar_include.xml"
     },
     {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/nav_header_main.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/nav_header_main.xml"
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_new_fragment.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_new_fragment.xml"
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/nav_header_main.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/nav_header_main.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
@@ -52,6 +48,10 @@
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_part_chronometer.xml"
     },
     {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_online.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_online.xml"
+    },
+    {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_title_material.xml"
     },
@@ -74,6 +74,14 @@
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_home.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_top.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_top.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/activity_search_result.xml",
@@ -172,12 +180,12 @@
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/app_bar_main.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/app_bar_main.xml"
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_new.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_new.xml"
     },
     {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_online_fragment.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_online_fragment.xml"
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/app_bar_main.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/app_bar_main.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
@@ -194,10 +202,6 @@
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_expanded_menu_layout.xml"
-    },
-    {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_top_.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_top_.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",

@@ -32,28 +32,28 @@ public final class R {
 		public static final int exo_controls_rewind = 0x7f020060;
 	}
 	public static final class id {
-		public static final int exo_artwork = 0x7f0e0004;
-		public static final int exo_content_frame = 0x7f0e0005;
-		public static final int exo_controller_placeholder = 0x7f0e0006;
-		public static final int exo_duration = 0x7f0e0007;
-		public static final int exo_ffwd = 0x7f0e0008;
-		public static final int exo_next = 0x7f0e0009;
-		public static final int exo_overlay = 0x7f0e000a;
-		public static final int exo_pause = 0x7f0e000b;
-		public static final int exo_play = 0x7f0e000c;
-		public static final int exo_position = 0x7f0e000d;
-		public static final int exo_prev = 0x7f0e000e;
-		public static final int exo_progress = 0x7f0e000f;
-		public static final int exo_rew = 0x7f0e0010;
-		public static final int exo_shutter = 0x7f0e0011;
-		public static final int exo_subtitles = 0x7f0e0012;
-		public static final int fill = 0x7f0e001e;
-		public static final int fit = 0x7f0e001f;
-		public static final int fixed_height = 0x7f0e0020;
-		public static final int fixed_width = 0x7f0e0021;
-		public static final int none = 0x7f0e0022;
-		public static final int surface_view = 0x7f0e0023;
-		public static final int texture_view = 0x7f0e0024;
+		public static final int exo_artwork = 0x7f0f0004;
+		public static final int exo_content_frame = 0x7f0f0005;
+		public static final int exo_controller_placeholder = 0x7f0f0006;
+		public static final int exo_duration = 0x7f0f0007;
+		public static final int exo_ffwd = 0x7f0f0008;
+		public static final int exo_next = 0x7f0f0009;
+		public static final int exo_overlay = 0x7f0f000a;
+		public static final int exo_pause = 0x7f0f000b;
+		public static final int exo_play = 0x7f0f000c;
+		public static final int exo_position = 0x7f0f000d;
+		public static final int exo_prev = 0x7f0f000e;
+		public static final int exo_progress = 0x7f0f000f;
+		public static final int exo_rew = 0x7f0f0010;
+		public static final int exo_shutter = 0x7f0f0011;
+		public static final int exo_subtitles = 0x7f0f0012;
+		public static final int fill = 0x7f0f001e;
+		public static final int fit = 0x7f0f001f;
+		public static final int fixed_height = 0x7f0f0020;
+		public static final int fixed_width = 0x7f0f0021;
+		public static final int none = 0x7f0f0022;
+		public static final int surface_view = 0x7f0f0023;
+		public static final int texture_view = 0x7f0f0024;
 	}
 	public static final class layout {
 		public static final int exo_playback_control_view = 0x7f04002e;
