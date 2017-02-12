@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_new"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="New" />
+        <item
+            android:id="@+id/nav_top"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Top" />
+        <item
+            android:id="@+id/nav_online"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Online" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_facebook"
+                android:icon="@drawable/ic_action_facebook"
+                android:title="Facebook page" />
+            <item
+                android:id="@+id/nav_youtube"
+                android:icon="@drawable/ic_action_youtube"
+                android:title="Youtube channel" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share screenShot" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_star"
+                android:title="Rate this app" />
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_action_mail"
+                android:title="Contact us" />
+        </menu>
+    </item>
+
+</menu>

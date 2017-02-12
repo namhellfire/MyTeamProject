@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_1a758f3c56802e1d7355f46c4d8f10cc4a4e19f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.1_1414f0ec6d5a6d4d873e7c617b33b9e33106d4c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_30172431e390247100107eae654baae10ac61efe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_71ad4513ea51b8d3a659de4dd6070a161e1c3e90.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_430591ccbc8fed0c5b71d327fd99d3abd8a5c82a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_b61d44af8a41d48aad34b378bcfd13f11b93847d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_955c6248a22d19b56b7de04558efdf12e1508924.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_b74bac6999a920114a666cb7dd9bd80ee9a1cc53.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="31ead391552fc8d93a7b87b0f15e83755b908904">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.google.android.exoplayer-exoplayer-r2.2.0_e8d0ceb486071a01d19911f592fe67e105643720.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_e40ff724f5e63b3399f3da6504be74ed68888d0b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_9899eecd7e023740e4683fb71840490d0f68c67f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_36d14d204373ae7a39528e5f97ef7a8ac628c5d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_9dd394e747cf83bbe345d7c00b85cdd55f394588.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/SVN/BigoOff/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_f41f6f7285d775012a2ba7ec9ba0b808bd3be412.jar" />
+    </item>
+
+</items>
