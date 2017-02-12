@@ -1,0 +1,113 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:2:1-41:12
+	package
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:3:5-27
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:6:5-75
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:6:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:7:22-76
+application
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:9:5-39:19
+MERGED from [com.android.support:design:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:12:9-41
+	android:supportsRtl
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:13:9-35
+	android:allowBackup
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:10:9-35
+	android:icon
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:11:9-43
+	android:theme
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:14:9-40
+activity#com.app.Bigo.MainActivity
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:15:9-24:20
+	android:label
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:17:13-45
+	android:theme
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:18:13-56
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:16:13-41
+meta-data#android.app.default_searchable
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:19:13-21:58
+	android:value
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:21:17-55
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:20:17-62
+activity#com.app.Bigo.Activitys.SearchResultsActivity
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:25:9-29:20
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:25:19-66
+intent-filter#android.intent.action.SEARCH
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:26:13-28:29
+action#android.intent.action.SEARCH
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:27:17-71
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:27:25-68
+activity#com.app.Bigo.Activitys.Splash_screen
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:30:9-38:20
+	android:screenOrientation
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:31:13-49
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:30:19-58
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:33:13-37:29
+action#android.intent.action.MAIN
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:34:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:36:17-77
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:36:27-74
+uses-sdk
+INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.google.android.exoplayer:exoplayer:r2.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/AndroidManifest.xml:21:5-23:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml

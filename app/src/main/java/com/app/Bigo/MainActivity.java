@@ -6,29 +6,61 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.app.Bigo.Fragments.Home_fragment;
+import com.app.Bigo.Fragments.New_fragment;
+import com.app.Bigo.Fragments.Online_fragment;
+import com.app.Bigo.Fragments.Top_Fragment;
 import com.app.Bigo.Utils.Util;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        Top_Fragment.OnFragmentInteractionListener,
+        New_fragment.OnFragmentInteractionListener,
+        Home_fragment.OnFragmentInteractionListener,
+        Online_fragment.OnFragmentInteractionListener {
 
     private final String TAG = MainActivity.class.getName();
+
+    private NavigationView navigationView;
+    private DrawerLayout drawer;
+    private Toolbar toolbar;
+    private ActionBarDrawerToggle toggle;
+
+    public static final String TAG_TOP_FRAGMENT = "TopFragment";
+    public static final String TAG_NEW_FRAGMENT = "NewFragment";
+    public static final String TAG_ONLINE_FRAGMENT = "OnlineFragment";
+    public static final String TAG_HOME_FRAGMENT = "HomeFragment";
+    public static String CURRENT_TAG = TAG_HOME_FRAGMENT;
+
+    public static int navItemSelected = 0;
+
+    private String[] ActivityTitle;
+    private Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        ActivityTitle = getResources().getStringArray(R.array.nav_item_activity_title);
+        mHandler = new Handler();
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -39,14 +71,16 @@ public class MainActivity extends AppCompatActivity
 //            }
 //        });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        loadPageFragment();
 
     }
 
@@ -127,15 +161,24 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        navItemSelected = 0;
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
+            navItemSelected = 0;
+            CURRENT_TAG = TAG_HOME_FRAGMENT;
 
         } else if (id == R.id.nav_new) {
+            navItemSelected = 1;
+            CURRENT_TAG = TAG_NEW_FRAGMENT;
 
         } else if (id == R.id.nav_top) {
+            navItemSelected = 2;
+            CURRENT_TAG = TAG_TOP_FRAGMENT;
 
         } else if (id == R.id.nav_online) {
+            navItemSelected = 3;
+            CURRENT_TAG = TAG_ONLINE_FRAGMENT;
 
         } else if (id == R.id.nav_facebook) {
             Intent intent = Util.getOpenFacebookIntent(getApplicationContext());
@@ -162,9 +205,66 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
 
         }
-
+        Log.d(TAG, "item select navibar " + CURRENT_TAG + " navibar selected " + navItemSelected);
+        loadPageFragment();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    public void loadPageFragment() {
+        if (getSupportFragmentManager().findFragmentByTag(CURRENT_TAG) != null) {
+            return;
+        }
+        Runnable mPendingRunable = new Runnable() {
+            @Override
+            public void run() {
+                Fragment fragment = getPageFragment();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frame, fragment, CURRENT_TAG);
+                fragmentTransaction.commit();
+            }
+        };
+
+        if (mPendingRunable != null) {
+            mHandler.post(mPendingRunable);
+        }
+
+        selectNavMenu();
+        setTitleToolbar();
+
+    }
+
+    public Fragment getPageFragment() {
+        switch (navItemSelected) {
+            case 0:
+                Home_fragment homeFragment = new Home_fragment();
+                return homeFragment;
+            case 1:
+                New_fragment newFragment = new New_fragment();
+                return newFragment;
+            case 2:
+                Top_Fragment topFragment = new Top_Fragment();
+                return topFragment;
+            case 3:
+                Online_fragment onlineFragment = new Online_fragment();
+                return onlineFragment;
+            default:
+                return new Home_fragment();
+        }
+    }
+
+    public void selectNavMenu() {
+        navigationView.getMenu().getItem(navItemSelected).setChecked(true);
+    }
+
+    public void setTitleToolbar() {
+        getSupportActionBar().setTitle(ActivityTitle[navItemSelected]);
+    }
+
 }
