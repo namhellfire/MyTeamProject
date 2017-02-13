@@ -4,7 +4,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,14 +41,26 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 
     }
 
+    public void remove(int position) {
+        mDataSet.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void add(String text, int position) {
+        mDataSet.add(position, text);
+        notifyItemInserted(position);
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView tvTitle;
         public RelativeLayout relativeLayout;
+        public CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvTitle = (TextView) itemView.findViewById(R.id.tvID);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relaLayoutAdapter);
+            cardView = (CardView) itemView.findViewById(R.id.card_view);
         }
     }
 
@@ -58,12 +72,18 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         final String title = mDataSet.get(position);
         final String src = "https://i.ytimg.com/vi/V3e_sq4sGME/hqdefault.jpg";
-        ImageLoadTask imageLoadTask = new ImageLoadTask(src, holder.relativeLayout);
+        ImageLoadTask imageLoadTask = new ImageLoadTask(src, holder.cardView);
         imageLoadTask.execute();
         holder.tvTitle.setText(title);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("listview", "postion : " + position);
+            }
+        });
 //        holder.imgThumbnail.setImageBitmap(UtilConnect.getBitmapFromURL(src));
     }
 
@@ -78,10 +98,11 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 
         private String url;
         private RelativeLayout relativeLayout;
+        private CardView cardView;
 
-        public ImageLoadTask(String url, RelativeLayout relativeLayout) {
+        public ImageLoadTask(String url, CardView cardView) {
             this.url = url;
-            this.relativeLayout = relativeLayout;
+            this.cardView = cardView;
         }
 
         @Override
@@ -105,7 +126,7 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
         protected void onPostExecute(Bitmap result) {
             super.onPostExecute(result);
             BitmapDrawable background = new BitmapDrawable(result);
-            relativeLayout.setBackgroundDrawable(background);
+            cardView.setBackgroundDrawable(background);
         }
 
     }

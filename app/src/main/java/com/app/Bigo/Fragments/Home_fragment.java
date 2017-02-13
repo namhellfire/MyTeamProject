@@ -3,15 +3,21 @@ package com.app.Bigo.Fragments;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.OvershootInterpolator;
 
 import com.app.Bigo.Adapter.OfflineAdapter;
 import com.app.Bigo.R;
+
+import jp.wasabeef.recyclerview.adapters.AlphaInAnimationAdapter;
+import jp.wasabeef.recyclerview.animators.SlideInDownAnimator;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -73,6 +79,12 @@ public class Home_fragment extends Fragment {
     }
 
     @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -81,7 +93,32 @@ public class Home_fragment extends Fragment {
         mListview = (RecyclerView) v.findViewById(R.id.lvOffline);
         mListview.setLayoutManager(linearLayoutManager);
 
-        mListview.setAdapter(mAdapter);
+
+        mListview.setOnScrollListener(new RecyclerView.OnScrollListener() {
+            int mLastFirstVisibleItem = 0;
+
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                final int currentFirstVisibleItem = linearLayoutManager.findFirstVisibleItemPosition();
+                if (currentFirstVisibleItem > this.mLastFirstVisibleItem) {
+                    ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+                } else if (currentFirstVisibleItem < this.mLastFirstVisibleItem) {
+                    ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+                }
+
+                this.mLastFirstVisibleItem = currentFirstVisibleItem;
+            }
+        });
+
+        mListview.setItemAnimator(new SlideInDownAnimator(new OvershootInterpolator(1f)));
+        AlphaInAnimationAdapter alphaInAnimationAdapter = new AlphaInAnimationAdapter(mAdapter);
+        mListview.setAdapter(alphaInAnimationAdapter);
 
         return v;
     }
