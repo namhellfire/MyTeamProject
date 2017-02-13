@@ -219,6 +219,7 @@ public class MainActivity extends AppCompatActivity
 
     public void loadPageFragment() {
         if (getSupportFragmentManager().findFragmentByTag(CURRENT_TAG) != null) {
+            Log.d(TAG, "fragment not null");
             return;
         }
         Runnable mPendingRunable = new Runnable() {
