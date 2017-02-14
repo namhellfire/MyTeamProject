@@ -33,7 +33,8 @@
         </activity>
         <activity
             android:name="com.app.Bigo.Activitys.Splash_screen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

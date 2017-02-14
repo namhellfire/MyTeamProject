@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+
         ActivityTitle = getResources().getStringArray(R.array.nav_item_activity_title);
         mHandler = new Handler();
 
@@ -266,6 +267,7 @@ public class MainActivity extends AppCompatActivity
 
     public void setTitleToolbar() {
         getSupportActionBar().setTitle(ActivityTitle[navItemSelected]);
+//        getActionBar().setTitle(ActivityTitle[navItemSelected]);
     }
 
 }

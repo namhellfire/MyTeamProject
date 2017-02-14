@@ -70,12 +70,12 @@ public final class R {
 	}
 	public static final class style {
 		public static final int ExoMediaButton = 0x7f0a001f;
-		public static final int ExoMediaButton_FastForward = 0x7f0a00db;
-		public static final int ExoMediaButton_Next = 0x7f0a00dc;
-		public static final int ExoMediaButton_Pause = 0x7f0a00dd;
-		public static final int ExoMediaButton_Play = 0x7f0a00de;
-		public static final int ExoMediaButton_Previous = 0x7f0a00df;
-		public static final int ExoMediaButton_Rewind = 0x7f0a00e0;
+		public static final int ExoMediaButton_FastForward = 0x7f0a00dc;
+		public static final int ExoMediaButton_Next = 0x7f0a00dd;
+		public static final int ExoMediaButton_Pause = 0x7f0a00de;
+		public static final int ExoMediaButton_Play = 0x7f0a00df;
+		public static final int ExoMediaButton_Previous = 0x7f0a00e0;
+		public static final int ExoMediaButton_Rewind = 0x7f0a00e1;
 	}
 	public static final class styleable {
 		public static final int[] AspectRatioFrameLayout = { 0x7f010006 };
