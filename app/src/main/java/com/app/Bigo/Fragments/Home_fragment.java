@@ -5,19 +5,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.OvershootInterpolator;
 
-import com.app.Bigo.Adapter.OfflineAdapter;
+import com.app.Bigo.API.ConstantAPI;
+import com.app.Bigo.AsyncTask.AsyncOffline;
+import com.app.Bigo.Model.ProfileOffline;
 import com.app.Bigo.R;
 
-import jp.wasabeef.recyclerview.adapters.AlphaInAnimationAdapter;
-import jp.wasabeef.recyclerview.animators.SlideInDownAnimator;
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,7 +40,10 @@ public class Home_fragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView mListview;
 
+    ArrayList<ProfileOffline> offlineArrayList;
+
     protected LinearLayoutManager linearLayoutManager;
+    protected GridLayoutManager gridLayoutManager;
 
     private OnFragmentInteractionListener mListener;
 
@@ -73,9 +76,8 @@ public class Home_fragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        offlineArrayList = new ArrayList<>();
 
-        mAdapter = new OfflineAdapter();
-        linearLayoutManager = new LinearLayoutManager(getActivity());
     }
 
     @Override
@@ -91,34 +93,33 @@ public class Home_fragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         mListview = (RecyclerView) v.findViewById(R.id.lvOffline);
-        mListview.setLayoutManager(linearLayoutManager);
+
+        AsyncOffline asyncOffline = new AsyncOffline(getActivity(),mListview);
+        asyncOffline.execute(ConstantAPI.API_LIST_ALL);
+
+//        mListview.setOnScrollListener(new RecyclerView.OnScrollListener() {
+//            int mLastFirstVisibleItem = 0;
+//
+//            @Override
+//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+//                super.onScrollStateChanged(recyclerView, newState);
+//            }
+//
+//            @Override
+//            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+//                super.onScrolled(recyclerView, dx, dy);
+//                final int currentFirstVisibleItem = linearLayoutManager.findFirstVisibleItemPosition();
+//                if (currentFirstVisibleItem > this.mLastFirstVisibleItem) {
+//                    ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+//                } else if (currentFirstVisibleItem < this.mLastFirstVisibleItem) {
+//                    ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+//                }
+//
+//                this.mLastFirstVisibleItem = currentFirstVisibleItem;
+//            }
+//        });
 
 
-        mListview.setOnScrollListener(new RecyclerView.OnScrollListener() {
-            int mLastFirstVisibleItem = 0;
-
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                final int currentFirstVisibleItem = linearLayoutManager.findFirstVisibleItemPosition();
-                if (currentFirstVisibleItem > this.mLastFirstVisibleItem) {
-                    ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
-                } else if (currentFirstVisibleItem < this.mLastFirstVisibleItem) {
-                    ((AppCompatActivity) getActivity()).getSupportActionBar().show();
-                }
-
-                this.mLastFirstVisibleItem = currentFirstVisibleItem;
-            }
-        });
-
-        mListview.setItemAnimator(new SlideInDownAnimator(new OvershootInterpolator(1f)));
-        AlphaInAnimationAdapter alphaInAnimationAdapter = new AlphaInAnimationAdapter(mAdapter);
-        mListview.setAdapter(alphaInAnimationAdapter);
 
         return v;
     }
@@ -161,4 +162,6 @@ public class Home_fragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

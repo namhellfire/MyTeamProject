@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.app.Bigo.API.ConstantAPI;
@@ -22,6 +23,7 @@ import java.io.IOException;
 public class Splash_screen extends AppCompatActivity {
 
     private final int SPLEEP = 2000;
+    private ImageView imgSplashscreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,11 @@ public class Splash_screen extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); // Removes notification bar
 
         setContentView(R.layout.activity_splash_screen);
+
+        imgSplashscreen = (ImageView) findViewById(R.id.imgSplashscreen);
+        imgSplashscreen.setScaleType(ImageView.ScaleType.FIT_XY);
+
+//        Glide.with(this).load("http://goo.gl/gEgYUd").into(imgSplashscreen);
 
 //        Handler handler = new Handler();
 //        handler.postDelayed(new Runnable() {
@@ -76,7 +83,7 @@ public class Splash_screen extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
             try {
-                UtilConnect.getAPI(strings[0]);
+                return UtilConnect.getAPI(strings[0]);
             } catch (IOException e) {
                 e.printStackTrace();
             }

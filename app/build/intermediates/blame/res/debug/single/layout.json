@@ -48,6 +48,10 @@
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_dialog_title_material.xml"
     },
     {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/exomedia_default_controls_mobile.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.1.1/res/layout/exomedia_default_controls_mobile.xml"
+    },
+    {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_action_tombstone.xml"
     },
@@ -58,6 +62,14 @@
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_online.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_online.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/exomedia_video_view_layout.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.1.1/res/layout/exomedia_video_view_layout.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/exomedia_default_native_surface_video_view.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.1.1/res/layout/exomedia_default_native_surface_video_view.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
@@ -74,6 +86,10 @@
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/layout/design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/exomedia_default_exo_surface_video_view.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.1.1/res/layout/exomedia_default_exo_surface_video_view.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
@@ -180,6 +196,10 @@
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/exomedia_default_native_texture_video_view.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.1.1/res/layout/exomedia_default_native_texture_video_view.xml"
+    },
+    {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/layout/design_bottom_navigation_item.xml"
     },
@@ -198,6 +218,10 @@
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_new.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_new.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/exomedia_default_exo_texture_video_view.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.1.1/res/layout/exomedia_default_exo_texture_video_view.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/app_bar_main.xml",

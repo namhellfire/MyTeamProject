@@ -9,19 +9,19 @@ package com.google.android.exoplayer2;
 public final class R {
 	public static final class attr {
 		public static final int controller_layout_id = 0x7f010000;
-		public static final int default_artwork = 0x7f01010d;
+		public static final int default_artwork = 0x7f010111;
 		public static final int fastforward_increment = 0x7f010002;
 		public static final int player_layout_id = 0x7f010005;
 		public static final int resize_mode = 0x7f010006;
 		public static final int rewind_increment = 0x7f010007;
 		public static final int show_timeout = 0x7f010008;
 		public static final int surface_type = 0x7f010009;
-		public static final int use_artwork = 0x7f01010c;
-		public static final int use_controller = 0x7f01010e;
+		public static final int use_artwork = 0x7f010110;
+		public static final int use_controller = 0x7f010112;
 	}
 	public static final class dimen {
-		public static final int exo_media_button_height = 0x7f09007b;
-		public static final int exo_media_button_width = 0x7f09007c;
+		public static final int exo_media_button_height = 0x7f09007c;
+		public static final int exo_media_button_width = 0x7f09007d;
 	}
 	public static final class drawable {
 		public static final int exo_controls_fastforward = 0x7f02005c;
@@ -85,7 +85,7 @@ public final class R {
 		public static final int PlaybackControlView_fastforward_increment = 1;
 		public static final int PlaybackControlView_rewind_increment = 2;
 		public static final int PlaybackControlView_show_timeout = 3;
-		public static final int[] SimpleExoPlayerView = { 0x7f010000, 0x7f010002, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01010c, 0x7f01010d, 0x7f01010e };
+		public static final int[] SimpleExoPlayerView = { 0x7f010000, 0x7f010002, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f010110, 0x7f010111, 0x7f010112 };
 		public static final int SimpleExoPlayerView_controller_layout_id = 0;
 		public static final int SimpleExoPlayerView_default_artwork = 8;
 		public static final int SimpleExoPlayerView_fastforward_increment = 1;

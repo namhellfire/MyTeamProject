@@ -1,23 +1,21 @@
 package com.app.Bigo.Adapter;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.AsyncTask;
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.app.Bigo.Model.ProfileOffline;
 import com.app.Bigo.R;
+import com.bumptech.glide.Glide;
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -27,10 +25,15 @@ import java.util.ArrayList;
 public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHolder> {
 
     private ArrayList<String> mDataSet;
+    private ArrayList<ProfileOffline> offlineArrayList = new ArrayList<>();
+    private Activity activity;
 
-    public OfflineAdapter(ArrayList<String> mDataSet) {
-        this.mDataSet = mDataSet;
+
+    public OfflineAdapter(ArrayList<ProfileOffline> arrayList, Activity activity) {
+        this.offlineArrayList = arrayList;
+        this.activity = activity;
     }
+
 
     public OfflineAdapter() {
         mDataSet = new ArrayList<>();
@@ -55,12 +58,17 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
         public TextView tvTitle;
         public RelativeLayout relativeLayout;
         public CardView cardView;
+        public TextView tvView;
+        public ImageView imgThumbnail;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvTitle = (TextView) itemView.findViewById(R.id.tvID);
+            tvTitle = (TextView) itemView.findViewById(R.id.tvName);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relaLayoutAdapter);
             cardView = (CardView) itemView.findViewById(R.id.card_view);
+            tvView = (TextView) itemView.findViewById(R.id.tvView);
+            imgThumbnail = (ImageView) itemView.findViewById(R.id.imgThumbnail);
+            imgThumbnail.setScaleType(ImageView.ScaleType.FIT_XY);
         }
     }
 
@@ -73,15 +81,17 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        final String title = mDataSet.get(position);
-        final String src = "https://i.ytimg.com/vi/V3e_sq4sGME/hqdefault.jpg";
-        ImageLoadTask imageLoadTask = new ImageLoadTask(src, holder.cardView);
-        imageLoadTask.execute();
-        holder.tvTitle.setText(title);
+//        final String title = mDataSet.get(position);
+//        final String src = "https://i.ytimg.com/vi/V3e_sq4sGME/hqdefault.jpg";
+//        ImageLoadTask imageLoadTask = new ImageLoadTask(offlineArrayList.get(position).getThumbnail(), holder.cardView);
+//        imageLoadTask.execute();
+        Glide.with(activity).load(offlineArrayList.get(position).getThumbnail()).into(holder.imgThumbnail);
+        holder.tvTitle.setText(offlineArrayList.get(position).getName());
+        holder.tvView.setText(String.valueOf(offlineArrayList.get(position).getView()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("listview", "postion : " + position);
+                activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(offlineArrayList.get(position).getUrl())));
             }
         });
 //        holder.imgThumbnail.setImageBitmap(UtilConnect.getBitmapFromURL(src));
@@ -90,44 +100,6 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return mDataSet.size();
-    }
-
-
-    public class ImageLoadTask extends AsyncTask<Void, Bitmap, Bitmap> {
-
-        private String url;
-        private RelativeLayout relativeLayout;
-        private CardView cardView;
-
-        public ImageLoadTask(String url, CardView cardView) {
-            this.url = url;
-            this.cardView = cardView;
-        }
-
-        @Override
-        protected Bitmap doInBackground(Void... params) {
-            try {
-                URL urlConnection = new URL(url);
-                HttpURLConnection connection = (HttpURLConnection) urlConnection
-                        .openConnection();
-                connection.setDoInput(true);
-                connection.connect();
-                InputStream input = connection.getInputStream();
-                Bitmap myBitmap = BitmapFactory.decodeStream(input);
-                return myBitmap;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Bitmap result) {
-            super.onPostExecute(result);
-            BitmapDrawable background = new BitmapDrawable(result);
-            cardView.setBackgroundDrawable(background);
-        }
-
+        return offlineArrayList.size();
     }
 }

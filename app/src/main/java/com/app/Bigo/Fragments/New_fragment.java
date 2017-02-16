@@ -4,10 +4,16 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.app.Bigo.API.ConstantAPI;
+import com.app.Bigo.Adapter.OfflineAdapter;
+import com.app.Bigo.AsyncTask.AsyncOffline;
 import com.app.Bigo.R;
 
 /**
@@ -27,6 +33,13 @@ public class New_fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView mListview;
+
+    protected LinearLayoutManager linearLayoutManager;
+    protected GridLayoutManager gridLayoutManager;
 
     private OnFragmentInteractionListener mListener;
 
@@ -59,13 +72,44 @@ public class New_fragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        mAdapter = new OfflineAdapter();
+        linearLayoutManager = new LinearLayoutManager(getActivity());
+        gridLayoutManager = new GridLayoutManager(getActivity(),2);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_new, container, false);
+        View v = inflater.inflate(R.layout.fragment_new, container, false);
+
+        mListview = (RecyclerView) v.findViewById(R.id.lvOffline);
+
+        AsyncOffline asyncOffline = new AsyncOffline(getActivity(),mListview);
+        asyncOffline.execute(ConstantAPI.API_LIST_NEW);
+//        mListview.setOnScrollListener(new RecyclerView.OnScrollListener() {
+//            int mLastFirstVisibleItem = 0;
+//
+//            @Override
+//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+//                super.onScrollStateChanged(recyclerView, newState);
+//            }
+//
+//            @Override
+//            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+//                super.onScrolled(recyclerView, dx, dy);
+//                final int currentFirstVisibleItem = linearLayoutManager.findFirstVisibleItemPosition();
+//                if (currentFirstVisibleItem > this.mLastFirstVisibleItem) {
+//                    ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+//                } else if (currentFirstVisibleItem < this.mLastFirstVisibleItem) {
+//                    ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+//                }
+//
+//                this.mLastFirstVisibleItem = currentFirstVisibleItem;
+//            }
+//        });
+
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/nguyennam/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/pre-dexed/debug/glide-3.7.0_1f0d2ead67bc7839a29ac11260f133772dd42799.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -207,6 +216,15 @@
         revision="25.0.0"
         sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
         <dex dex="/Volumes/Data/SVN/BigoOff/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_b61d44af8a41d48aad34b378bcfd13f11b93847d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e9802780a84ecf2063968c1da84f9e65191717dc">
+        <dex dex="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/pre-dexed/debug/com.devbrackets.android-exomedia-3.1.1_7fb945d8c08793d929a8d6ab127ade358987a66e.jar" />
     </item>
     <item
         is-multidex="false"
