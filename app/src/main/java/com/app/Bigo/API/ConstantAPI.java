@@ -8,7 +8,7 @@ public class ConstantAPI {
 
     public static final int TIME_OUT = 2000;
 
-
+    public static final String SERVER = "http://static.letsbigo.com/";
     // ------ list API --------
     public static final String API_LISTAPI = "http://static.letsbigo.com/list.json";
 

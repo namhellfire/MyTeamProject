@@ -16,6 +16,10 @@
 
     <string name="no_internet">No internet connected</string>
 
+    <string name="more">MORE</string>
+
+    <string name="ion_ios_arrow_right">&#xf3d3;</string>
+
     <string-array name="nav_item_activity_title">
         <item>Home</item>
         <item>New</item>

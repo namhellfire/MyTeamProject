@@ -95,7 +95,7 @@ public class Home_fragment extends Fragment {
         mListview = (RecyclerView) v.findViewById(R.id.lvOffline);
 
         AsyncOffline asyncOffline = new AsyncOffline(getActivity(),mListview);
-        asyncOffline.execute(ConstantAPI.API_LIST_ALL);
+        asyncOffline.execute(ConstantAPI.API_LIST_TOP);
 
 //        mListview.setOnScrollListener(new RecyclerView.OnScrollListener() {
 //            int mLastFirstVisibleItem = 0;

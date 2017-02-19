@@ -20,11 +20,15 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.app.Bigo.API.ListManager;
 import com.app.Bigo.Fragments.Home_fragment;
 import com.app.Bigo.Fragments.New_fragment;
 import com.app.Bigo.Fragments.Online_fragment;
 import com.app.Bigo.Fragments.Top_Fragment;
+import com.app.Bigo.Model.ListAPI;
 import com.app.Bigo.Utils.Util;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -50,6 +54,8 @@ public class MainActivity extends AppCompatActivity
 
     private String[] ActivityTitle;
     private Handler mHandler;
+    private Intent mIntent;
+    public static ArrayList<ListAPI> listAPIs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +64,8 @@ public class MainActivity extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        mIntent = getIntent();
+        listAPIs = mIntent.getParcelableArrayListExtra(ListManager.LIST_API);
 
         ActivityTitle = getResources().getStringArray(R.array.nav_item_activity_title);
         mHandler = new Handler();
@@ -254,7 +261,12 @@ public class MainActivity extends AppCompatActivity
                 Top_Fragment topFragment = new Top_Fragment();
                 return topFragment;
             case 3:
+//                Intent intent = new Intent(this, PlayerActivity.class);
+//                startActivity(intent);
                 Online_fragment onlineFragment = new Online_fragment();
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList(ListManager.LIST_API,listAPIs);
+                onlineFragment.setArguments(bundle);
                 return onlineFragment;
             default:
                 return new Home_fragment();

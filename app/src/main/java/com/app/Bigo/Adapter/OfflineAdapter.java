@@ -85,7 +85,7 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 //        final String src = "https://i.ytimg.com/vi/V3e_sq4sGME/hqdefault.jpg";
 //        ImageLoadTask imageLoadTask = new ImageLoadTask(offlineArrayList.get(position).getThumbnail(), holder.cardView);
 //        imageLoadTask.execute();
-        Glide.with(activity).load(offlineArrayList.get(position).getThumbnail()).into(holder.imgThumbnail);
+        Glide.with(activity).load(offlineArrayList.get(position).getThumbnail()).error(R.drawable.ic_no_image).placeholder(R.drawable.ic_no_image).into(holder.imgThumbnail);
         holder.tvTitle.setText(offlineArrayList.get(position).getName());
         holder.tvView.setText(String.valueOf(offlineArrayList.get(position).getView()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {

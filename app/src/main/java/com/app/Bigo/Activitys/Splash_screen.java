@@ -14,11 +14,14 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.app.Bigo.API.ConstantAPI;
+import com.app.Bigo.API.ListManager;
 import com.app.Bigo.MainActivity;
+import com.app.Bigo.Model.ListAPI;
 import com.app.Bigo.R;
 import com.app.Bigo.Utils.UtilConnect;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Splash_screen extends AppCompatActivity {
 
@@ -36,8 +39,8 @@ public class Splash_screen extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash_screen);
 
-        imgSplashscreen = (ImageView) findViewById(R.id.imgSplashscreen);
-        imgSplashscreen.setScaleType(ImageView.ScaleType.FIT_XY);
+//        imgSplashscreen = (ImageView) findViewById(R.id.imgSplashscreen);
+//        imgSplashscreen.setScaleType(ImageView.ScaleType.FIT_XY);
 
 //        Glide.with(this).load("http://goo.gl/gEgYUd").into(imgSplashscreen);
 
@@ -98,13 +101,20 @@ public class Splash_screen extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            ArrayList<ListAPI> listAPIs = new ArrayList<>();
+            if (s != null) {
+                listAPIs = UtilConnect.ParseListAPI(s);
+            }
+
             Handler handler = new Handler();
+            final ArrayList<ListAPI> finalListAPIs = listAPIs;
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(activity, MainActivity.class);
-                    startActivity(intent);
-                    activity.finish();
+            Intent intent = new Intent(activity, MainActivity.class);
+            intent.putParcelableArrayListExtra(ListManager.LIST_API, finalListAPIs);
+            startActivity(intent);
+            activity.finish();
                 }
             }, 2000);
 

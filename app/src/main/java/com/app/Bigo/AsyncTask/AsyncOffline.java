@@ -59,7 +59,7 @@ public class AsyncOffline extends AsyncTask<String, String, ArrayList<ProfileOff
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setItemAnimator(new SlideInDownAnimator(new OvershootInterpolator(1f)));
         AlphaInAnimationAdapter alphaInAnimationAdapter = new AlphaInAnimationAdapter(offlineAdapter);
-        recyclerView.addItemDecoration(new SpacesItemDecoration(2));
+        recyclerView.addItemDecoration(new SpacesItemDecoration(10));
         recyclerView.setAdapter(alphaInAnimationAdapter);
     }
 }

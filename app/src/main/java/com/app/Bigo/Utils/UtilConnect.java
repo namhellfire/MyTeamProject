@@ -8,6 +8,8 @@ import android.widget.ImageView;
 
 import com.app.Bigo.API.ConstantAPI;
 import com.app.Bigo.API.DataResponse;
+import com.app.Bigo.Model.CountryApi;
+import com.app.Bigo.Model.ListAPI;
 import com.app.Bigo.Model.ProfileOffline;
 import com.app.Bigo.Model.ProfileOnline;
 
@@ -28,6 +30,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -35,6 +38,8 @@ import java.util.Map;
  */
 
 public class UtilConnect {
+
+    private static final String TAG = "UtilConnect";
 
     public static DataResponse connectAPI(String link, HashMap<String, String> data) {
         try {
@@ -257,20 +262,60 @@ public class UtilConnect {
         return null;
     }
 
+    public void ParseJsonCOuntry(){
+
+    }
+
+    public static ArrayList<ListAPI> ParseListAPI(String value) {
+        ArrayList<ListAPI> listAPIs = new ArrayList<>();
+        try {
+            JSONObject jsonObject = new JSONObject(value);
+            Iterator nsads = jsonObject.keys();
+            while (nsads.hasNext()) {
+                String url = (String) nsads.next();
+                ListAPI listAPI = new ListAPI();
+                listAPI.setUri(url);
+                listAPI.setMd5(jsonObject.getString(url));
+                listAPIs.add(listAPI);
+            }
+            return listAPIs;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ArrayList<CountryApi> getCountry(ArrayList<ListAPI> listAPIs) {
+        ArrayList<CountryApi> ListCountry = new ArrayList<>();
+        for (ListAPI api : listAPIs) {
+            String country = api.getUri().replace(ConstantAPI.SERVER, "").replace(".json", "");
+            if (country.equalsIgnoreCase("new") || country.equalsIgnoreCase("top") || country.equalsIgnoreCase("all")) {
+
+            } else {
+                String CountryName = country.substring(0, 1).toUpperCase() + country.substring(1);
+                CountryApi countryApi = new CountryApi();
+                countryApi.setCountry(CountryName);
+                countryApi.setAPIUrl(api.getUri());
+                ListCountry.add(countryApi);
+            }
+        }
+        return ListCountry;
+    }
+
     public static Bitmap getBitmapFromURL(String src) {
         try {
-            Log.e("src",src);
+            Log.e("src", src);
             URL url = new URL(src);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setDoInput(true);
             connection.connect();
             InputStream input = connection.getInputStream();
             Bitmap myBitmap = BitmapFactory.decodeStream(input);
-            Log.e("Bitmap","returned");
+            Log.e("Bitmap", "returned");
             return myBitmap;
         } catch (IOException e) {
             e.printStackTrace();
-            Log.e("Exception",e.getMessage());
+            Log.e("Exception", e.getMessage());
             return null;
         }
     }
