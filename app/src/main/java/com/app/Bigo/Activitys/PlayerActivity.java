@@ -57,6 +57,8 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
 
+        getSupportActionBar().hide();
+
         Intent intent = getIntent();
         String url = intent.getStringExtra(Profile.LIVE_URL);
 //        videoView = (EMVideoView) findViewById(R.id.playerEM);
@@ -112,7 +114,7 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
     public void onPause() {
         super.onPause();
         if (Util.SDK_INT <= 23) {
-//            releasePlayer();
+            releasePlayer();
         }
     }
 
@@ -120,12 +122,12 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
     public void onStop() {
         super.onStop();
         if (Util.SDK_INT > 23) {
-//            releasePlayer();
+            releasePlayer();
         }
     }
 
     public void initPlayer(String url) {
-        Log.d(TAG,"link video live : "+url);
+        Log.d(TAG, "link video live : " + url);
         TrackSelection.Factory videoTrackSelectionFactory =
                 new AdaptiveVideoTrackSelection.Factory(BANDWIDTH_METER);
         trackSelector = new DefaultTrackSelector(videoTrackSelectionFactory);
@@ -206,6 +208,20 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
             default: {
                 throw new IllegalStateException("Unsupported type: " + type);
             }
+        }
+    }
+
+    private void releasePlayer() {
+        if (player != null) {
+//            debugViewHelper.stop();
+//            debugViewHelper = null;
+//            shouldAutoPlay = player.getPlayWhenReady();
+//            updateResumePosition();
+            player.release();
+            player = null;
+            trackSelector = null;
+//            trackSelectionHelper = null;
+            eventLogger = null;
         }
     }
 }

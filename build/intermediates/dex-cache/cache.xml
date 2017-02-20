@@ -57,21 +57,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_8ac232e255a1c9d3a3ab5af9db11db29504d26bb.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_8282d4ae206013b1faf933927f698b88b8f9ace5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_8ac232e255a1c9d3a3ab5af9db11db29504d26bb.jar" />
     </item>
     <item
         is-multidex="false"
@@ -174,6 +174,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/jp.wasabeef/recyclerview-animators/2.2.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="215abfa2b78865741d99f7b9c0afb79894986505">
+        <dex dex="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/pre-dexed/debug/jp.wasabeef-recyclerview-animators-2.2.5_c3542b5e953c0e51fe4af6b9c8f2ac21d2752e55.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Volumes/Data/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
         jumboMode="false"
         optimize="true"
@@ -189,15 +198,6 @@
         revision="25.0.0"
         sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
         <dex dex="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.1_5f675fce688ca3f5fdbd1f6b31570bda81ddde6d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/jp.wasabeef/recyclerview-animators/2.2.5/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="215abfa2b78865741d99f7b9c0afb79894986505">
-        <dex dex="/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/pre-dexed/debug/jp.wasabeef-recyclerview-animators-2.2.5_c3542b5e953c0e51fe4af6b9c8f2ac21d2752e55.jar" />
     </item>
     <item
         is-multidex="false"
