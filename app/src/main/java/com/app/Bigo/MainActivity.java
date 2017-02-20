@@ -165,6 +165,8 @@ public class MainActivity extends AppCompatActivity
 //            case R.id.action_settings:
 //                break;
             case R.id.action_search:
+                return true;
+            case R.id.action_reload:
                 break;
             default:
                 break;
@@ -284,7 +286,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void LoadListOnline(){
+    public void LoadListOnline() {
         Runnable mPendingRunable = new Runnable() {
             @Override
             public void run() {

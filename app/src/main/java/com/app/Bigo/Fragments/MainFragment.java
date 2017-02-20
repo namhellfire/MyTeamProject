@@ -42,7 +42,6 @@ public class MainFragment extends Fragment {
     public static String ApiUrl;
     private SwipeRefreshLayout swipeRefreshLayout;
 
-    protected LinearLayoutManager linearLayoutManager;
 
     public MainFragment() {
         // Required empty public constructor
@@ -71,8 +70,6 @@ public class MainFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        mAdapter = new OfflineAdapter();
-        linearLayoutManager = new LinearLayoutManager(getActivity());
     }
 
     @Override

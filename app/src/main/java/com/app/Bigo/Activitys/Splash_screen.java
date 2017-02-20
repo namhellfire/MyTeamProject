@@ -3,11 +3,13 @@ package com.app.Bigo.Activitys;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -17,8 +19,13 @@ import com.app.Bigo.API.ConstantAPI;
 import com.app.Bigo.API.ListManager;
 import com.app.Bigo.MainActivity;
 import com.app.Bigo.Model.ListAPI;
+import com.app.Bigo.Model.ProfileOffline;
 import com.app.Bigo.R;
 import com.app.Bigo.Utils.UtilConnect;
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,6 +34,7 @@ public class Splash_screen extends AppCompatActivity {
 
     private final int SPLEEP = 2000;
     private ImageView imgSplashscreen;
+    private ArrayList<ProfileOffline> profileOfflines;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,24 +47,14 @@ public class Splash_screen extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash_screen);
 
-//        imgSplashscreen = (ImageView) findViewById(R.id.imgSplashscreen);
-//        imgSplashscreen.setScaleType(ImageView.ScaleType.FIT_XY);
-
-//        Glide.with(this).load("http://goo.gl/gEgYUd").into(imgSplashscreen);
-
-//        Handler handler = new Handler();
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        }, SPLEEP);
+        profileOfflines = new ArrayList<>();
 
         if (isNetworkAvailable()) {
             ListAPIAsync apiAsync = new ListAPIAsync(this);
             apiAsync.execute(ConstantAPI.API_LISTAPI);
+
+            ListAllAsync allAsync = new ListAllAsync(this);
+            allAsync.execute(ConstantAPI.API_LIST_ALL);
         } else {
             Toast.makeText(this, getString(R.string.no_internet), Toast.LENGTH_SHORT).show();
         }
@@ -111,13 +109,67 @@ public class Splash_screen extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-            Intent intent = new Intent(activity, MainActivity.class);
-            intent.putParcelableArrayListExtra(ListManager.LIST_API, finalListAPIs);
-            startActivity(intent);
-            activity.finish();
+                    Intent intent = new Intent(activity, MainActivity.class);
+                    intent.putParcelableArrayListExtra(ListManager.LIST_API, finalListAPIs);
+                    startActivity(intent);
+                    activity.finish();
                 }
             }, 2000);
 
+
+        }
+    }
+
+
+    class ListAllAsync extends AsyncTask<String, String, String> {
+
+        Activity activity;
+
+        public ListAllAsync(Activity activity) {
+            this.activity = activity;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected String doInBackground(String... strings) {
+            try {
+                return UtilConnect.getAPI(strings[0]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            if (s != null) {
+                ArrayList<ProfileOffline> profileOfflines = new ArrayList<>();
+                try {
+                    profileOfflines = UtilConnect.ParseJsonOffline(new JSONArray(s));
+
+                    SharedPreferences appSharedPrefs = PreferenceManager
+                            .getDefaultSharedPreferences(activity);
+                    SharedPreferences.Editor prefsEditor = appSharedPrefs.edit();
+                    Gson gson = new Gson();
+                    String json = gson.toJson(profileOfflines);
+                    prefsEditor.putString(ListManager.LIST_ALL, json);
+                    prefsEditor.commit();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
 
         }
     }

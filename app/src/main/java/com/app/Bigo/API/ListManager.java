@@ -6,4 +6,5 @@ package com.app.Bigo.API;
 
 public class ListManager {
     public static final String LIST_API = "listAPI";
+    public static final String LIST_ALL = "listAll";
 }

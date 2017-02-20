@@ -241,7 +241,7 @@ public class UtilConnect {
                 profileOffline.setUrl(object.getString(ProfileOffline.URL));
                 profileOffline.setDescription(object.getString(ProfileOffline.DESCRIPTION));
                 profileOffline.setThumbnail(object.getString(ProfileOffline.THUMBNAIL));
-                profileOffline.setView(object.getInt(ProfileOffline.VIEW));
+                profileOffline.setView(object.getString(ProfileOffline.VIEW));
                 profileOffline.setLike(object.getInt(ProfileOffline.LIKE));
                 profileOffline.setDislike(object.getInt(ProfileOffline.DISLIKE));
                 profileOffline.setComment(object.getInt(ProfileOffline.COMMENT));

@@ -31,7 +31,7 @@ public class ProfileOffline implements Parcelable {
     private String url;
     private String description;
     private String thumbnail;
-    private int view;
+    private String view;
     private int like;
     private int dislike;
     private int comment;
@@ -89,11 +89,11 @@ public class ProfileOffline implements Parcelable {
         this.thumbnail = thumbnail;
     }
 
-    public int getView() {
+    public String getView() {
         return view;
     }
 
-    public void setView(int view) {
+    public void setView(String view) {
         this.view = view;
     }
 
@@ -174,7 +174,7 @@ public class ProfileOffline implements Parcelable {
         dest.writeString(this.url);
         dest.writeString(this.description);
         dest.writeString(this.thumbnail);
-        dest.writeInt(this.view);
+        dest.writeString(this.view);
         dest.writeInt(this.like);
         dest.writeInt(this.dislike);
         dest.writeInt(this.comment);
@@ -195,7 +195,7 @@ public class ProfileOffline implements Parcelable {
         this.url = in.readString();
         this.description = in.readString();
         this.thumbnail = in.readString();
-        this.view = in.readInt();
+        this.view = in.readString();
         this.like = in.readInt();
         this.dislike = in.readInt();
         this.comment = in.readInt();
