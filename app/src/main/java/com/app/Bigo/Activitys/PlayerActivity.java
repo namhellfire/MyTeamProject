@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 
+import com.app.Bigo.Model.Profile;
 import com.app.Bigo.Player.DemoApplication;
 import com.app.Bigo.Player.EventLogger;
 import com.app.Bigo.R;
 import com.devbrackets.android.exomedia.listener.OnPreparedListener;
-import com.devbrackets.android.exomedia.ui.widget.EMVideoView;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.ExoPlaybackException;
@@ -40,7 +41,8 @@ import com.google.android.exoplayer2.util.Util;
 
 public class PlayerActivity extends AppCompatActivity implements OnPreparedListener, PlaybackControlView.VisibilityListener, ExoPlayer.EventListener {
 
-    EMVideoView videoView;
+    private final String TAG = "Player Activity";
+
     SimpleExoPlayerView exoPlayerView;
     private Handler mainHandler;
     private EventLogger eventLogger;
@@ -55,6 +57,8 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
 
+        Intent intent = getIntent();
+        String url = intent.getStringExtra(Profile.LIVE_URL);
 //        videoView = (EMVideoView) findViewById(R.id.playerEM);
 //        videoView.setOnPreparedListener(this);
 
@@ -66,7 +70,7 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
         exoPlayerView.setControllerVisibilityListener(this);
         exoPlayerView.requestFocus();
 
-        initPlayer();
+        initPlayer(url);
 
     }
 
@@ -120,8 +124,8 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
         }
     }
 
-    public void initPlayer(){
-
+    public void initPlayer(String url) {
+        Log.d(TAG,"link video live : "+url);
         TrackSelection.Factory videoTrackSelectionFactory =
                 new AdaptiveVideoTrackSelection.Factory(BANDWIDTH_METER);
         trackSelector = new DefaultTrackSelector(videoTrackSelectionFactory);
@@ -137,9 +141,9 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
 
         exoPlayerView.setPlayer(player);
 
-        Uri uri = Uri.parse("https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4");
+        Uri uri = Uri.parse(url);
         MediaSource mediaSource = buildMediaSource(uri, null);
-        player.prepare(mediaSource,false,false);
+        player.prepare(mediaSource, false, false);
     }
 
     @Override
@@ -176,7 +180,7 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
      * Returns a new DataSource factory.
      *
      * @param useBandwidthMeter Whether to set {@link #BANDWIDTH_METER} as a listener to the new
-     *     DataSource factory.
+     *                          DataSource factory.
      * @return A new DataSource factory.
      */
     private DataSource.Factory buildDataSourceFactory(boolean useBandwidthMeter) {

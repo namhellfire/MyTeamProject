@@ -3,19 +3,26 @@ package com.app.Bigo.Adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.app.Bigo.Model.ProfileOffline;
+import com.app.Bigo.Activitys.PlayerActivity;
+import com.app.Bigo.AsyncTask.AsyncOnline;
+import com.app.Bigo.Model.Profile;
 import com.app.Bigo.R;
+import com.app.Bigo.Utils.UtilConnect;
 import com.bumptech.glide.Glide;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -25,12 +32,12 @@ import java.util.ArrayList;
 public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHolder> {
 
     private ArrayList<String> mDataSet;
-    private ArrayList<ProfileOffline> offlineArrayList = new ArrayList<>();
+    private ArrayList<Profile> profileArrayList = new ArrayList<>();
     private Activity activity;
 
 
-    public OfflineAdapter(ArrayList<ProfileOffline> arrayList, Activity activity) {
-        this.offlineArrayList = arrayList;
+    public OfflineAdapter(ArrayList<Profile> arrayList, Activity activity) {
+        this.profileArrayList = arrayList;
         this.activity = activity;
     }
 
@@ -85,13 +92,21 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 //        final String src = "https://i.ytimg.com/vi/V3e_sq4sGME/hqdefault.jpg";
 //        ImageLoadTask imageLoadTask = new ImageLoadTask(offlineArrayList.get(position).getThumbnail(), holder.cardView);
 //        imageLoadTask.execute();
-        Glide.with(activity).load(offlineArrayList.get(position).getThumbnail()).error(R.drawable.ic_no_image).placeholder(R.drawable.ic_no_image).into(holder.imgThumbnail);
-        holder.tvTitle.setText(offlineArrayList.get(position).getName());
-        holder.tvView.setText(String.valueOf(offlineArrayList.get(position).getView()));
+        Glide.with(activity).load(profileArrayList.get(position).getThumbnail()).error(R.drawable.ic_no_image).placeholder(R.drawable.ic_no_image).into(holder.imgThumbnail);
+        holder.tvTitle.setText(Html.fromHtml(profileArrayList.get(position).getName()));
+
+        holder.tvView.setText(String.valueOf(profileArrayList.get(position).getView()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(offlineArrayList.get(position).getUrl())));
+                String url = profileArrayList.get(position).getUrl();
+                boolean isLive = url.contains(".m3u8");
+                if (isLive) {
+                    AsyncOnline asyncOnline = new AsyncOnline();
+                    asyncOnline.execute(profileArrayList.get(position).getUrl());
+                } else {
+                    activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(profileArrayList.get(position).getUrl())));
+                }
             }
         });
 //        holder.imgThumbnail.setImageBitmap(UtilConnect.getBitmapFromURL(src));
@@ -100,6 +115,41 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return offlineArrayList.size();
+        return profileArrayList.size();
+    }
+
+    public class AsyncGetLink extends AsyncTask<String, String, String> {
+
+        public AsyncGetLink() {
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String result = null;
+            try {
+                result = UtilConnect.getAPI(strings[0]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            if (s != null) {
+                Intent intent = new Intent(activity, PlayerActivity.class);
+                intent.putExtra(Profile.LIVE_URL, s);
+                activity.startActivity(intent);
+            } else {
+                Toast.makeText(activity, activity.getString(R.string.check_network), Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
 }

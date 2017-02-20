@@ -6,6 +6,7 @@ package com.app.Bigo.Model;
 
 public class CountryApi {
     private String country;
+    private String APIUrl;
 
     public String getAPIUrl() {
         return APIUrl;
@@ -14,8 +15,6 @@ public class CountryApi {
     public void setAPIUrl(String APIUrl) {
         this.APIUrl = APIUrl;
     }
-
-    private String APIUrl;
 
     public String getCountry() {
         return country;

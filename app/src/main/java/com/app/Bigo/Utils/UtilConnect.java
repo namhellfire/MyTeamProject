@@ -10,6 +10,7 @@ import com.app.Bigo.API.ConstantAPI;
 import com.app.Bigo.API.DataResponse;
 import com.app.Bigo.Model.CountryApi;
 import com.app.Bigo.Model.ListAPI;
+import com.app.Bigo.Model.Profile;
 import com.app.Bigo.Model.ProfileOffline;
 import com.app.Bigo.Model.ProfileOnline;
 
@@ -262,9 +263,73 @@ public class UtilConnect {
         return null;
     }
 
-    public void ParseJsonCOuntry(){
+    public static ArrayList<Profile> ParseJsonProfile(JSONArray array) {
+        ArrayList<Profile> profileArrayList = new ArrayList<>();
+        try {
+            int length = array.getJSONObject(0).length();
+            if (length >= 15) {
+                profileArrayList = parseProfileOffline(array);
+            } else {
+                profileArrayList = parseProfileOnline(array);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
+        if (profileArrayList.size() > 0 && profileArrayList != null) {
+            return profileArrayList;
+        }
+        return null;
     }
+
+    public static ArrayList<Profile> parseProfileOffline(JSONArray arr) {
+        ArrayList<Profile> profileArrayList = new ArrayList<>();
+        for (int i = 0; i < arr.length(); i++) {
+            try {
+                JSONObject object = arr.getJSONObject(i);
+                Profile profile = new Profile();
+                profile.setName(object.getString(ProfileOffline.NAME));
+                profile.setStatus(object.getString(ProfileOffline.DESCRIPTION));
+                profile.setThumbnail(object.getString(ProfileOffline.THUMBNAIL));
+                profile.setUrl(object.getString(ProfileOffline.URL));
+                profile.setView(object.getString(ProfileOffline.VIEW));
+
+                profileArrayList.add(profile);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (profileArrayList.size() > 0 && profileArrayList != null) {
+            return profileArrayList;
+        }
+        return null;
+    }
+
+    public static ArrayList<Profile> parseProfileOnline(JSONArray arr) {
+        ArrayList<Profile> profileArrayList = new ArrayList<>();
+        for (int i = 0; i < arr.length(); i++) {
+            try {
+                JSONObject object = arr.getJSONObject(i);
+                Profile profile = new Profile();
+                profile.setName(object.getString(ProfileOnline.NICK_NAME));
+                profile.setStatus(object.getString(ProfileOnline.STATUS));
+                profile.setThumbnail(object.getString(ProfileOnline.BIG_IMG));
+                profile.setUrl(object.getString(ProfileOnline.LIVE_URL));
+                profile.setView(object.getString(ProfileOnline.USER_COUNT));
+
+                profileArrayList.add(profile);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (profileArrayList.size() > 0 && profileArrayList != null) {
+            return profileArrayList;
+        }
+        return null;
+    }
+
 
     public static ArrayList<ListAPI> ParseListAPI(String value) {
         ArrayList<ListAPI> listAPIs = new ArrayList<>();

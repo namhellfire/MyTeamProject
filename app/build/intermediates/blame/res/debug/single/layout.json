@@ -44,6 +44,10 @@
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.0.5/res/layout/exomedia_default_controls_mobile.xml"
     },
     {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/fragment_main.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/layout/fragment_main.xml"
+    },
+    {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_action_tombstone.xml"
     },

@@ -8,6 +8,9 @@ public class Profile {
     private String name;
     private String thumbnail;
     private String url;
+    private String status;
+    private String view;
+    public static String LIVE_URL = "live_url";
 
     public String getName() {
         return name;
@@ -49,6 +52,5 @@ public class Profile {
         this.view = view;
     }
 
-    private String status;
-    private String view;
+
 }

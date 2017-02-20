@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.app.Bigo.MainActivity;
 import com.app.Bigo.Model.CountryApi;
 import com.app.Bigo.Model.ProfileOnline;
 import com.app.Bigo.R;
@@ -30,6 +33,9 @@ import jp.wasabeef.recyclerview.animators.SlideInDownAnimator;
  */
 
 public class OnlineAdapter extends RecyclerView.Adapter<OnlineAdapter.ViewHolder> {
+
+    private final String TAG = "OnlineAdapter";
+
     private Icon_Manager icon_manager;
     private LinearLayoutManager linearLayoutManager;
     private Activity activity;
@@ -52,9 +58,17 @@ public class OnlineAdapter extends RecyclerView.Adapter<OnlineAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.tvCountry.setText((mData.get(position).getCountry()));
-
+        holder.tvArrowMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG, "more click");
+                MainActivity.ApiUrl = mData.get(position).getAPIUrl();
+                MainActivity ac = (MainActivity) activity;
+                ac.LoadListOnline();
+            }
+        });
 
 
     }
@@ -110,20 +124,25 @@ public class OnlineAdapter extends RecyclerView.Adapter<OnlineAdapter.ViewHolder
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
-            ArrayList<ProfileOnline> arrayList = new ArrayList<>();
-            try {
-                arrayList = UtilConnect.ParseJsonOnline(new JSONArray(s));
-            } catch (JSONException e) {
-                e.printStackTrace();
+            if (s != null) {
+                ArrayList<ProfileOnline> arrayList = new ArrayList<>();
+                try {
+                    arrayList = UtilConnect.ParseJsonOnline(new JSONArray(s));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                CountryAdapter countryAdapter = new CountryAdapter(activity, arrayList);
+                linearLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false);
+                holder.lvVideoCountry.setLayoutManager(linearLayoutManager);
+                holder.lvVideoCountry.setItemAnimator(new SlideInDownAnimator(new OvershootInterpolator(1f)));
+                AlphaInAnimationAdapter alphaInAnimationAdapter = new AlphaInAnimationAdapter(countryAdapter);
+                holder.lvVideoCountry.addItemDecoration(new SpacesItemDecoration(10));
+                holder.lvVideoCountry.setAdapter(alphaInAnimationAdapter);
+            } else {
+                Toast.makeText(activity, activity.getString(R.string.check_network), Toast.LENGTH_SHORT).show();
             }
-            CountryAdapter countryAdapter = new CountryAdapter(activity, arrayList);
-            linearLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false);
-            holder.lvVideoCountry.setLayoutManager(linearLayoutManager);
-            holder.lvVideoCountry.setItemAnimator(new SlideInDownAnimator(new OvershootInterpolator(1f)));
-            AlphaInAnimationAdapter alphaInAnimationAdapter = new AlphaInAnimationAdapter(countryAdapter);
-            holder.lvVideoCountry.addItemDecoration(new SpacesItemDecoration(10));
-            holder.lvVideoCountry.setAdapter(alphaInAnimationAdapter);
         }
+
     }
+
 }

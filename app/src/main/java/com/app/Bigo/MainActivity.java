@@ -20,8 +20,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.app.Bigo.API.ConstantAPI;
 import com.app.Bigo.API.ListManager;
 import com.app.Bigo.Fragments.Home_fragment;
+import com.app.Bigo.Fragments.MainFragment;
 import com.app.Bigo.Fragments.New_fragment;
 import com.app.Bigo.Fragments.Online_fragment;
 import com.app.Bigo.Fragments.Top_Fragment;
@@ -35,7 +37,8 @@ public class MainActivity extends AppCompatActivity
         Top_Fragment.OnFragmentInteractionListener,
         New_fragment.OnFragmentInteractionListener,
         Home_fragment.OnFragmentInteractionListener,
-        Online_fragment.OnFragmentInteractionListener {
+        Online_fragment.OnFragmentInteractionListener,
+        MainFragment.OnFragmentInteractionListener {
 
     private final String TAG = MainActivity.class.getName();
 
@@ -48,14 +51,17 @@ public class MainActivity extends AppCompatActivity
     public static final String TAG_NEW_FRAGMENT = "NewFragment";
     public static final String TAG_ONLINE_FRAGMENT = "OnlineFragment";
     public static final String TAG_HOME_FRAGMENT = "HomeFragment";
-    public static String CURRENT_TAG = TAG_HOME_FRAGMENT;
 
+    public static String CURRENT_TAG = TAG_HOME_FRAGMENT;
     public static int navItemSelected = 0;
+    public static String ApiUrl;
 
     private String[] ActivityTitle;
     private Handler mHandler;
     private Intent mIntent;
+
     public static ArrayList<ListAPI> listAPIs = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +69,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ApiUrl = ConstantAPI.API_LIST_TOP;
 
         mIntent = getIntent();
         listAPIs = mIntent.getParcelableArrayListExtra(ListManager.LIST_API);
@@ -213,6 +221,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
 
         }
+        ApiUrl = setAPiUrl(navItemSelected);
         Log.d(TAG, "item select navibar " + CURRENT_TAG + " navibar selected " + navItemSelected);
         loadPageFragment();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -252,24 +261,42 @@ public class MainActivity extends AppCompatActivity
     public Fragment getPageFragment() {
         switch (navItemSelected) {
             case 0:
-                Home_fragment homeFragment = new Home_fragment();
-                return homeFragment;
+//                Home_fragment homeFragment = new Home_fragment();
+//                return homeFragment;
             case 1:
-                New_fragment newFragment = new New_fragment();
-                return newFragment;
+//                New_fragment newFragment = new New_fragment();
+//                return newFragment;
             case 2:
-                Top_Fragment topFragment = new Top_Fragment();
-                return topFragment;
+//                Top_Fragment topFragment = new Top_Fragment();
+//                return topFragment;
+                MainFragment mainFragment = new MainFragment();
+                return mainFragment;
             case 3:
 //                Intent intent = new Intent(this, PlayerActivity.class);
 //                startActivity(intent);
                 Online_fragment onlineFragment = new Online_fragment();
                 Bundle bundle = new Bundle();
-                bundle.putParcelableArrayList(ListManager.LIST_API,listAPIs);
+                bundle.putParcelableArrayList(ListManager.LIST_API, listAPIs);
                 onlineFragment.setArguments(bundle);
                 return onlineFragment;
             default:
                 return new Home_fragment();
+        }
+    }
+
+    public void LoadListOnline(){
+        Runnable mPendingRunable = new Runnable() {
+            @Override
+            public void run() {
+                MainFragment mainFragment = new MainFragment();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frame, mainFragment, CURRENT_TAG);
+                fragmentTransaction.commit();
+            }
+        };
+
+        if (mPendingRunable != null) {
+            mHandler.post(mPendingRunable);
         }
     }
 
@@ -280,6 +307,21 @@ public class MainActivity extends AppCompatActivity
     public void setTitleToolbar() {
         getSupportActionBar().setTitle(ActivityTitle[navItemSelected]);
 //        getActionBar().setTitle(ActivityTitle[navItemSelected]);
+    }
+
+    public String setAPiUrl(int type) {
+        switch (type) {
+            case 0:
+                return ConstantAPI.API_LIST_TOP;
+            case 1:
+                return ConstantAPI.API_LIST_NEW;
+            case 2:
+                return ConstantAPI.API_LIST_TOP;
+            case 3:
+                return ConstantAPI.API_LISTAPI;
+            default:
+                return ConstantAPI.API_LIST_TOP;
+        }
     }
 
 }
