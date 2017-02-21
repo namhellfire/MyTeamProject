@@ -19,5 +19,6 @@ public class ConstantAPI {
     // ------ list fanpage ------------
     public static final String FACEBOOK_PAGE = "https://www.facebook.com/letsbigo";
     public static final String YOUTUBE_CHANNEL = "https://www.youtube.com/c/Letsbigo";
+    public static final String YOUTUBE = "www.youtube.com";
 
 }

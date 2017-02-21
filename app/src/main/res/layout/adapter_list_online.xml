@@ -6,7 +6,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <TextView
             android:id="@+id/tvCountry"
@@ -14,7 +15,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
-            android:text="Viet Name" />
+            android:gravity="center_vertical"
+            android:text="Viet Name"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tvArrowMore"
@@ -22,14 +25,19 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:text="@string/ion_ios_arrow_right" />
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:text="@string/ion_ios_arrow_right"
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:layout_toLeftOf="@id/tvArrowMore"
-            android:text="@string/more" />
+            android:gravity="center_vertical"
+            android:text="@string/more"
+            android:textSize="15sp" />
 
 
     </RelativeLayout>
@@ -37,7 +45,8 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/lvVideoCountry"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
 
     </android.support.v7.widget.RecyclerView>
 

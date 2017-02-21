@@ -2,14 +2,11 @@ package com.app.Bigo.AsyncTask;
 
 import android.app.Activity;
 import android.os.AsyncTask;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Toast;
 
 import com.app.Bigo.Adapter.OfflineAdapter;
-import com.app.Bigo.Adapter.SpacesItemDecoration;
 import com.app.Bigo.Model.Profile;
 import com.app.Bigo.R;
 import com.app.Bigo.Utils.UtilConnect;
@@ -19,6 +16,7 @@ import org.json.JSONException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import jp.wasabeef.recyclerview.adapters.AlphaInAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.SlideInDownAnimator;
@@ -43,6 +41,7 @@ public class AsyncOffline extends AsyncTask<String, String, ArrayList<Profile>> 
         try {
             String result = UtilConnect.getAPI(strings[0]);
             profileArrayList = UtilConnect.ParseJsonProfile(new JSONArray(result));
+            Collections.shuffle(profileArrayList);
             return profileArrayList;
         } catch (IOException e) {
             e.printStackTrace();
@@ -57,12 +56,8 @@ public class AsyncOffline extends AsyncTask<String, String, ArrayList<Profile>> 
         super.onPostExecute(arrayList);
         if (arrayList != null && arrayList.size() > 0) {
             offlineAdapter = new OfflineAdapter(arrayList, activity);
-            final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(activity);
-            final GridLayoutManager gridLayoutManager = new GridLayoutManager(activity, 2);
-            recyclerView.setLayoutManager(gridLayoutManager);
             recyclerView.setItemAnimator(new SlideInDownAnimator(new OvershootInterpolator(1f)));
             AlphaInAnimationAdapter alphaInAnimationAdapter = new AlphaInAnimationAdapter(offlineAdapter);
-            recyclerView.addItemDecoration(new SpacesItemDecoration(10));
             recyclerView.setAdapter(alphaInAnimationAdapter);
         } else {
             Toast.makeText(activity, R.string.check_network, Toast.LENGTH_SHORT).show();

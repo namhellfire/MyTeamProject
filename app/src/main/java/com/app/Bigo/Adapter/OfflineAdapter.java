@@ -15,10 +15,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.Bigo.API.ConstantAPI;
 import com.app.Bigo.Activitys.PlayerActivity;
-import com.app.Bigo.AsyncTask.AsyncOnline;
 import com.app.Bigo.Model.Profile;
 import com.app.Bigo.R;
+import com.app.Bigo.Utils.Icon_Manager;
 import com.app.Bigo.Utils.UtilConnect;
 import com.bumptech.glide.Glide;
 
@@ -34,6 +35,7 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
     private ArrayList<String> mDataSet;
     private ArrayList<Profile> profileArrayList = new ArrayList<>();
     private Activity activity;
+    private Icon_Manager icon_manager = new Icon_Manager();
 
 
     public OfflineAdapter(ArrayList<Profile> arrayList, Activity activity) {
@@ -65,7 +67,7 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
         public TextView tvTitle;
         public RelativeLayout relativeLayout;
         public CardView cardView;
-        public TextView tvView;
+        public TextView tvView, iconView;
         public ImageView imgThumbnail;
 
         public ViewHolder(View itemView) {
@@ -75,7 +77,8 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
             cardView = (CardView) itemView.findViewById(R.id.card_view);
             tvView = (TextView) itemView.findViewById(R.id.tvView);
             imgThumbnail = (ImageView) itemView.findViewById(R.id.imgThumbnail);
-            imgThumbnail.setScaleType(ImageView.ScaleType.FIT_XY);
+            iconView = (TextView) itemView.findViewById(R.id.iconView);
+            iconView.setTypeface(icon_manager.get_icons("fonts/ionicons.ttf", activity));
         }
     }
 
@@ -94,16 +97,15 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 //        imageLoadTask.execute();
         Glide.with(activity).load(profileArrayList.get(position).getThumbnail()).error(R.drawable.ic_no_image).placeholder(R.drawable.ic_no_image).into(holder.imgThumbnail);
         holder.tvTitle.setText(Html.fromHtml(profileArrayList.get(position).getName()));
-
         holder.tvView.setText(String.valueOf(profileArrayList.get(position).getView()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String url = profileArrayList.get(position).getUrl();
-                boolean isLive = url.contains(".m3u8");
+                boolean isLive = !url.contains(ConstantAPI.YOUTUBE);
                 if (isLive) {
-                    AsyncOnline asyncOnline = new AsyncOnline();
-                    asyncOnline.execute(profileArrayList.get(position).getUrl());
+                    AsyncGetLink asyncGetLink = new AsyncGetLink();
+                    asyncGetLink.execute(profileArrayList.get(position).getUrl());
                 } else {
                     activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(profileArrayList.get(position).getUrl())));
                 }
@@ -115,6 +117,9 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 
     @Override
     public int getItemCount() {
+        if (profileArrayList.size() > 50){
+            return 50;
+        }
         return profileArrayList.size();
     }
 

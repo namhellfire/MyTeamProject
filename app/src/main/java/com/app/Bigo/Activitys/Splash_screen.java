@@ -35,6 +35,7 @@ public class Splash_screen extends AppCompatActivity {
     private final int SPLEEP = 2000;
     private ImageView imgSplashscreen;
     private ArrayList<ProfileOffline> profileOfflines;
+    SharedPreferences appSharedPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,9 +158,10 @@ public class Splash_screen extends AppCompatActivity {
                 ArrayList<ProfileOffline> profileOfflines = new ArrayList<>();
                 try {
                     profileOfflines = UtilConnect.ParseJsonOffline(new JSONArray(s));
-
-                    SharedPreferences appSharedPrefs = PreferenceManager
-                            .getDefaultSharedPreferences(activity);
+                    if (appSharedPrefs == null) {
+                        appSharedPrefs = PreferenceManager
+                                .getDefaultSharedPreferences(activity);
+                    }
                     SharedPreferences.Editor prefsEditor = appSharedPrefs.edit();
                     Gson gson = new Gson();
                     String json = gson.toJson(profileOfflines);

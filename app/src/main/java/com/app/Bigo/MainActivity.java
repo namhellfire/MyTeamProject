@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -54,7 +55,8 @@ public class MainActivity extends AppCompatActivity
 
     public static String CURRENT_TAG = TAG_HOME_FRAGMENT;
     public static int navItemSelected = 0;
-    public static String ApiUrl;
+    public static String ApiUrl = ConstantAPI.API_LIST_ALL;
+    public static boolean isOnline = false;
 
     private String[] ActivityTitle;
     private Handler mHandler;
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ApiUrl = ConstantAPI.API_LIST_TOP;
+        Log.d(TAG,"oncreate");
 
         mIntent = getIntent();
         listAPIs = mIntent.getParcelableArrayListExtra(ListManager.LIST_API);
@@ -136,6 +138,9 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+        } else if (isOnline) {
+            isOnline = false;
+            loadPageFragment();
         } else {
             super.onBackPressed();
         }
@@ -154,6 +159,20 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        int orrentation = newConfig.orientation;
+        switch (orrentation) {
+            case Configuration.ORIENTATION_LANDSCAPE:
+                Log.d(TAG,"orrentation : "+orrentation);
+                break;
+            case Configuration.ORIENTATION_PORTRAIT:
+                Log.d(TAG,"orrentation : "+orrentation);
+                break;
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -167,7 +186,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.action_search:
                 return true;
             case R.id.action_reload:
-                break;
+                loadPageFragment();
+                return true;
             default:
                 break;
         }
@@ -223,6 +243,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
 
         }
+
+        if (!CURRENT_TAG.equalsIgnoreCase(TAG_ONLINE_FRAGMENT)) {
+            isOnline = false;
+        }
         ApiUrl = setAPiUrl(navItemSelected);
         Log.d(TAG, "item select navibar " + CURRENT_TAG + " navibar selected " + navItemSelected);
         loadPageFragment();
@@ -239,7 +263,7 @@ public class MainActivity extends AppCompatActivity
     public void loadPageFragment() {
         if (getSupportFragmentManager().findFragmentByTag(CURRENT_TAG) != null) {
             Log.d(TAG, "fragment not null");
-            return;
+//            return;
         }
         Runnable mPendingRunable = new Runnable() {
             @Override
@@ -286,7 +310,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void LoadListOnline() {
+    public void LoadListOnline(String country) {
         Runnable mPendingRunable = new Runnable() {
             @Override
             public void run() {
@@ -300,6 +324,7 @@ public class MainActivity extends AppCompatActivity
         if (mPendingRunable != null) {
             mHandler.post(mPendingRunable);
         }
+        getSupportActionBar().setTitle(country);
     }
 
     public void selectNavMenu() {
@@ -314,7 +339,7 @@ public class MainActivity extends AppCompatActivity
     public String setAPiUrl(int type) {
         switch (type) {
             case 0:
-                return ConstantAPI.API_LIST_TOP;
+                return ConstantAPI.API_LIST_ALL;
             case 1:
                 return ConstantAPI.API_LIST_NEW;
             case 2:
@@ -325,5 +350,6 @@ public class MainActivity extends AppCompatActivity
                 return ConstantAPI.API_LIST_TOP;
         }
     }
+
 
 }

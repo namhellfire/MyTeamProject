@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,10 +62,10 @@ public class OnlineAdapter extends RecyclerView.Adapter<OnlineAdapter.ViewHolder
         holder.tvArrowMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "more click");
+                MainActivity.isOnline = true;
                 MainActivity.ApiUrl = mData.get(position).getAPIUrl();
                 MainActivity ac = (MainActivity) activity;
-                ac.LoadListOnline();
+                ac.LoadListOnline(mData.get(position).getCountry());
             }
         });
 

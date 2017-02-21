@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Feb 21 01:41:31 ICT 2017
+#Tue Feb 21 22:14:02 ICT 2017
 210.set=ANDROID_RESOURCE
 282.file=/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
 14.set=ANDROID_RESOURCE

@@ -1,18 +1,19 @@
 package com.app.Bigo.Fragments;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.app.Bigo.API.ConstantAPI;
-import com.app.Bigo.Adapter.OfflineAdapter;
+import com.app.Bigo.Adapter.SpacesItemDecoration;
 import com.app.Bigo.AsyncTask.AsyncOffline;
 import com.app.Bigo.MainActivity;
 import com.app.Bigo.R;
@@ -31,6 +32,8 @@ public class MainFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private final String TAG = "MainFragment";
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -41,6 +44,7 @@ public class MainFragment extends Fragment {
     private RecyclerView mListview;
     public static String ApiUrl;
     private SwipeRefreshLayout swipeRefreshLayout;
+    private GridLayoutManager gridLayoutManager;
 
 
     public MainFragment() {
@@ -76,10 +80,20 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
+        Log.d(TAG, "oncreate view ");
         View v = inflater.inflate(R.layout.fragment_top, container, false);
-
+        int currentOrientation = getResources().getConfiguration().orientation;
+        if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // Landscape
+            gridLayoutManager = new GridLayoutManager(getActivity(), 3);
+        } else {
+            // Portrait
+            gridLayoutManager = new GridLayoutManager(getActivity(), 2);
+        }
         mListview = (RecyclerView) v.findViewById(R.id.lvOffline);
+        mListview.addItemDecoration(new SpacesItemDecoration(10));
+        mListview.setLayoutManager(gridLayoutManager);
+
         swipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swipeRefreshLayout);
         swipeRefreshLayout.setEnabled(true);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -88,14 +102,15 @@ public class MainFragment extends Fragment {
                 refreshList();
             }
         });
-
+        Log.d(TAG, "Url api : " + MainActivity.ApiUrl);
         AsyncOffline asyncOffline = new AsyncOffline(getActivity(), mListview);
         asyncOffline.execute(MainActivity.ApiUrl);
         return v;
     }
 
     public void refreshList() {
-
+        MainActivity ac = (MainActivity) getActivity();
+        ac.loadPageFragment();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
