@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BIGO HOT VIDEO</string>
+    <string name="app_name">HOT GIRL FOR BIGO</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -13,6 +13,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="email_contact">contact@letsbigo.com</string>
+
 
     <string name="no_internet">No internet connected</string>
     <string name="check_network">Please check your network</string>
@@ -21,6 +23,9 @@
 
     <string name="ion_ios_arrow_right">&#xf3d3;</string>
     <string name="ion_eye">&#xf133;</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-9233883698624873/6283597944</string>
+    <string name="app_id">ca-app-pub-9233883698624873~4806864748</string>
 
     <string-array name="nav_item_activity_title">
         <item>Home</item>

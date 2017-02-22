@@ -4,8 +4,16 @@
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/anim/abc_popup_enter.xml"
     },
     {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/slide_right.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/anim/slide_right.xml"
+    },
+    {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/layout_slide_right.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/anim/layout_slide_right.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
@@ -18,6 +26,10 @@
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/actionsheet_grow_from_top.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/anim/actionsheet_grow_from_top.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
@@ -54,6 +66,10 @@
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/anim/design_fab_in.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/actionsheet_grow_from_bottom.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/anim/actionsheet_grow_from_bottom.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",

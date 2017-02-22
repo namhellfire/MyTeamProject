@@ -1,10 +1,6 @@
 package com.app.Bigo.Utils;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.ImageView;
 
 import com.app.Bigo.API.ConstantAPI;
 import com.app.Bigo.API.DataResponse;
@@ -352,72 +348,22 @@ public class UtilConnect {
 
     public static ArrayList<CountryApi> getCountry(ArrayList<ListAPI> listAPIs) {
         ArrayList<CountryApi> ListCountry = new ArrayList<>();
-        for (ListAPI api : listAPIs) {
-            String country = api.getUri().replace(ConstantAPI.SERVER, "").replace(".json", "");
-            if (country.equalsIgnoreCase("new") || country.equalsIgnoreCase("top") || country.equalsIgnoreCase("all")) {
+        if (listAPIs.size() > 0 && listAPIs != null) {
+            for (ListAPI api : listAPIs) {
+                String country = api.getUri().replace(ConstantAPI.SERVER, "").replace(".json", "");
+                if (country.equalsIgnoreCase("new") || country.equalsIgnoreCase("top") || country.equalsIgnoreCase("all")) {
 
-            } else {
-                String CountryName = country.substring(0, 1).toUpperCase() + country.substring(1);
-                CountryApi countryApi = new CountryApi();
-                countryApi.setCountry(CountryName);
-                countryApi.setAPIUrl(api.getUri());
-                ListCountry.add(countryApi);
+                } else {
+                    String CountryName = country.substring(0, 1).toUpperCase() + country.substring(1);
+                    CountryApi countryApi = new CountryApi();
+                    countryApi.setCountry(CountryName);
+                    countryApi.setAPIUrl(api.getUri());
+                    ListCountry.add(countryApi);
+                }
             }
+            return ListCountry;
         }
-        return ListCountry;
-    }
-
-    public static Bitmap getBitmapFromURL(String src) {
-        try {
-            Log.e("src", src);
-            URL url = new URL(src);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setDoInput(true);
-            connection.connect();
-            InputStream input = connection.getInputStream();
-            Bitmap myBitmap = BitmapFactory.decodeStream(input);
-            Log.e("Bitmap", "returned");
-            return myBitmap;
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e("Exception", e.getMessage());
-            return null;
-        }
-    }
-
-    public class ImageLoadTask extends AsyncTask<Void, Bitmap, Bitmap> {
-
-        private String url;
-        private ImageView imageView;
-
-        public ImageLoadTask(String url, ImageView imageView) {
-            this.url = url;
-            this.imageView = imageView;
-        }
-
-        @Override
-        protected Bitmap doInBackground(Void... params) {
-            try {
-                URL urlConnection = new URL(url);
-                HttpURLConnection connection = (HttpURLConnection) urlConnection
-                        .openConnection();
-                connection.setDoInput(true);
-                connection.connect();
-                InputStream input = connection.getInputStream();
-                Bitmap myBitmap = BitmapFactory.decodeStream(input);
-                return myBitmap;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Bitmap result) {
-            super.onPostExecute(result);
-            imageView.setImageBitmap(result);
-        }
+        return null;
 
     }
-
 }

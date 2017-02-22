@@ -2,6 +2,7 @@ package com.app.Bigo.Activitys;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +10,13 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.app.Bigo.Model.Profile;
 import com.app.Bigo.Player.DemoApplication;
 import com.app.Bigo.Player.EventLogger;
 import com.app.Bigo.R;
-import com.devbrackets.android.exomedia.listener.OnPreparedListener;
+import com.app.Bigo.Utils.UtilConnect;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.ExoPlaybackException;
@@ -40,10 +42,13 @@ import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
 import com.google.android.exoplayer2.util.Util;
+import com.wang.avi.AVLoadingIndicatorView;
 
-public class PlayerActivity extends AppCompatActivity implements OnPreparedListener, PlaybackControlView.VisibilityListener, ExoPlayer.EventListener {
+import java.io.IOException;
 
-    private final String TAG = "Player Activity";
+public class PlayerActivity extends AppCompatActivity implements PlaybackControlView.VisibilityListener, ExoPlayer.EventListener {
+
+    private final String TAG = "PlayerActivity";
 
     SimpleExoPlayerView exoPlayerView;
     private Handler mainHandler;
@@ -51,6 +56,7 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
 
     private DataSource.Factory mediaDataSourceFactory;
     private SimpleExoPlayer player;
+    private AVLoadingIndicatorView avi;
     private DefaultTrackSelector trackSelector;
     private static final DefaultBandwidthMeter BANDWIDTH_METER = new DefaultBandwidthMeter();
 
@@ -66,10 +72,8 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
 
         Intent intent = getIntent();
         String url = intent.getStringExtra(Profile.LIVE_URL);
-//        videoView = (EMVideoView) findViewById(R.id.playerEM);
-//        videoView.setOnPreparedListener(this);
 
-//        videoView.setVideoURI(Uri.parse("https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4"));
+
         mediaDataSourceFactory = buildDataSourceFactory(true);
         mainHandler = new Handler();
 
@@ -77,14 +81,14 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
         exoPlayerView.setControllerVisibilityListener(this);
         exoPlayerView.requestFocus();
 
-        initPlayer(url);
+        avi = (AVLoadingIndicatorView) findViewById(R.id.avi);
+
+        AsyncGetLink asyncGetLink = new AsyncGetLink();
+        asyncGetLink.execute(url);
+
 
     }
 
-    @Override
-    public void onPrepared() {
-//        videoView.start();
-    }
 
     @Override
     public void onVisibilityChange(int visibility) {
@@ -165,17 +169,31 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
 
     @Override
     public void onLoadingChanged(boolean isLoading) {
-
+        Log.d(TAG, "onPlayerStateChanged : " + isLoading);
     }
 
     @Override
     public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
+        Log.d(TAG, "onPlayerStateChanged : " + playbackState + "  playbackState : " + playbackState);
+        switch (playbackState) {
+            case 1:
 
+            case 2:
+                if (!avi.isShown()) {
+                    startAnim();
+                }
+                break;
+            case 3:
+                if (avi.isShown()) {
+                    stopAnim();
+                }
+                break;
+        }
     }
 
     @Override
     public void onPlayerError(ExoPlaybackException error) {
-
+        Log.d(TAG, "onPlayerError : " + error);
     }
 
     @Override
@@ -229,4 +247,52 @@ public class PlayerActivity extends AppCompatActivity implements OnPreparedListe
             eventLogger = null;
         }
     }
+
+    void startAnim() {
+        avi.show();
+        // or avi.smoothToShow();
+    }
+
+    void stopAnim() {
+        avi.hide();
+        // or avi.smoothToHide();
+    }
+
+
+    public class AsyncGetLink extends AsyncTask<String, String, String> {
+
+        public AsyncGetLink() {
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            startAnim();
+        }
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String result = null;
+            try {
+                result = UtilConnect.getAPI(strings[0]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            if (s != null && !s.trim().isEmpty()) {
+                initPlayer(s);
+            } else {
+                Toast.makeText(getApplicationContext(), getString(R.string.check_network), Toast.LENGTH_SHORT).show();
+                stopAnim();
+                finish();
+            }
+        }
+
+    }
+
 }

@@ -55,6 +55,7 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:paddingTop="3dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="false"
@@ -66,10 +67,11 @@
                     android:id="@+id/tvView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
                     android:text="view"
                     android:textColor="@color/colorWhite"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
 
                 <TextView
                     android:id="@+id/iconView"
@@ -78,8 +80,10 @@
                     android:layout_marginRight="3dp"
                     android:layout_toLeftOf="@id/tvView"
                     android:text="@string/ion_eye"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_vertical"
                     android:textColor="@color/colorWhite"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
 
             </RelativeLayout>
 

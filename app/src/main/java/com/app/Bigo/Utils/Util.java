@@ -3,6 +3,8 @@ package com.app.Bigo.Utils;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
 
 import com.app.Bigo.API.ConstantAPI;
 
@@ -46,6 +48,24 @@ public class Util {
                 Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
                 Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
         return goToMarket;
+    }
+
+    public static int getScreenWidth(Context context) {
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(outMetrics);
+        int screenW = outMetrics.widthPixels;
+
+        return screenW;
+    }
+
+    public static int getScreenHeight(Context context) {
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(outMetrics);
+        int screenH = outMetrics.heightPixels;
+
+        return screenH;
     }
 
 }

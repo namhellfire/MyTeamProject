@@ -3,6 +3,7 @@ package com.app.Bigo.Activitys;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
@@ -45,6 +46,8 @@ public class SearchResultsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search_result);
 
         ActionBar actionBar = getSupportActionBar();
+        Drawable dr = getDrawable(R.drawable.side_nav_bar);
+        actionBar.setBackgroundDrawable(dr);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.lvOffline);

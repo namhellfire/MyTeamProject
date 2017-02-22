@@ -8,7 +8,7 @@
             android:title="Home" />
         <item
             android:id="@+id/nav_new"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_new"
             android:title="New" />
         <item
             android:id="@+id/nav_top"
@@ -16,7 +16,7 @@
             android:title="Top" />
         <item
             android:id="@+id/nav_online"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_public"
             android:title="Online" />
     </group>
 

@@ -65,7 +65,16 @@ public class OnlineAdapter extends RecyclerView.Adapter<OnlineAdapter.ViewHolder
                 MainActivity.isOnline = true;
                 MainActivity.ApiUrl = mData.get(position).getAPIUrl();
                 MainActivity ac = (MainActivity) activity;
-                ac.LoadListOnline(mData.get(position).getCountry());
+                ac.loadDataContent();
+            }
+        });
+        holder.tvMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.isOnline = true;
+                MainActivity.ApiUrl = mData.get(position).getAPIUrl();
+                MainActivity ac = (MainActivity) activity;
+                ac.loadDataContent();
             }
         });
 
@@ -84,13 +93,14 @@ public class OnlineAdapter extends RecyclerView.Adapter<OnlineAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView tvCountry;
-        public TextView tvArrowMore;
+        public TextView tvArrowMore, tvMore;
         public RecyclerView lvVideoCountry;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvCountry = (TextView) itemView.findViewById(R.id.tvCountry);
             tvArrowMore = (TextView) itemView.findViewById(R.id.tvArrowMore);
+            tvMore = (TextView) itemView.findViewById(R.id.tvMore);
             lvVideoCountry = (RecyclerView) itemView.findViewById(R.id.lvVideoCountry);
             tvArrowMore.setTypeface(icon_manager.get_icons("fonts/ionicons.ttf", activity));
         }

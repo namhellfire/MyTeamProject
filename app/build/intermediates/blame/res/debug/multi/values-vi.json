@@ -6,9 +6,9 @@
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
                     "endColumn": 113,
-                    "endOffset": 164
+                    "endOffset": 214
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -25,9 +25,9 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 169,
+                    "startOffset": 219,
                     "endColumn": 107,
-                    "endOffset": 272
+                    "endOffset": 322
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -44,9 +44,9 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 277,
+                    "startOffset": 327,
                     "endColumn": 122,
-                    "endOffset": 395
+                    "endOffset": 445
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -63,9 +63,9 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 400,
+                    "startOffset": 450,
                     "endColumn": 107,
-                    "endOffset": 503
+                    "endOffset": 553
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -82,9 +82,9 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 508,
+                    "startOffset": 558,
                     "endColumn": 108,
-                    "endOffset": 612
+                    "endOffset": 662
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -101,9 +101,9 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 617,
+                    "startOffset": 667,
                     "endColumn": 83,
-                    "endOffset": 696
+                    "endOffset": 746
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -120,9 +120,9 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 701,
+                    "startOffset": 751,
                     "endColumn": 102,
-                    "endOffset": 799
+                    "endOffset": 849
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -139,9 +139,9 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 804,
+                    "startOffset": 854,
                     "endColumn": 118,
-                    "endOffset": 918
+                    "endOffset": 968
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -158,9 +158,9 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 923,
+                    "startOffset": 973,
                     "endColumn": 76,
-                    "endOffset": 995
+                    "endOffset": 1045
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -177,9 +177,9 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1000,
+                    "startOffset": 1050,
                     "endColumn": 76,
-                    "endOffset": 1072
+                    "endOffset": 1122
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -196,9 +196,9 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1077,
+                    "startOffset": 1127,
                     "endColumn": 83,
-                    "endOffset": 1156
+                    "endOffset": 1206
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -215,9 +215,9 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1161,
+                    "startOffset": 1211,
                     "endColumn": 103,
-                    "endOffset": 1260
+                    "endOffset": 1310
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -234,9 +234,9 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1265,
+                    "startOffset": 1315,
                     "endColumn": 108,
-                    "endOffset": 1369
+                    "endOffset": 1419
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -253,9 +253,9 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1374,
+                    "startOffset": 1424,
                     "endColumn": 100,
-                    "endOffset": 1470
+                    "endOffset": 1520
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -272,9 +272,9 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1475,
+                    "startOffset": 1525,
                     "endColumn": 104,
-                    "endOffset": 1575
+                    "endOffset": 1625
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -291,9 +291,9 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1580,
+                    "startOffset": 1630,
                     "endColumn": 113,
-                    "endOffset": 1689
+                    "endOffset": 1739
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -310,9 +310,9 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1694,
+                    "startOffset": 1744,
                     "endColumn": 104,
-                    "endOffset": 1794
+                    "endOffset": 1844
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -329,9 +329,9 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1799,
+                    "startOffset": 1849,
                     "endColumn": 119,
-                    "endOffset": 1914
+                    "endOffset": 1964
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -348,9 +348,9 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1919,
+                    "startOffset": 1969,
                     "endColumn": 98,
-                    "endOffset": 2013
+                    "endOffset": 2063
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -367,9 +367,484 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 2018,
+                    "startOffset": 2068,
+                    "endColumn": 74,
+                    "endOffset": 2138
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 237,
+                        "endColumn": 70,
+                        "endOffset": 307
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2143,
+                    "endColumn": 103,
+                    "endOffset": 2242
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 283,
+                        "endColumn": 99,
+                        "endOffset": 382
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2247,
+                    "endColumn": 193,
+                    "endOffset": 2436
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 383,
+                        "endColumn": 193,
+                        "endOffset": 576
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2441,
+                    "endColumn": 126,
+                    "endOffset": 2563
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 577,
+                        "endColumn": 122,
+                        "endOffset": 699
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2568,
+                    "endColumn": 108,
+                    "endOffset": 2672
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 700,
+                        "endColumn": 104,
+                        "endOffset": 804
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2677,
+                    "endColumn": 223,
+                    "endOffset": 2896
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 805,
+                        "endColumn": 223,
+                        "endOffset": 1028
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2901,
+                    "endColumn": 131,
+                    "endOffset": 3028
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 1029,
+                        "endColumn": 127,
+                        "endOffset": 1156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 3033,
+                    "endColumn": 132,
+                    "endOffset": 3161
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 1157,
+                        "endColumn": 128,
+                        "endOffset": 1285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 3166,
+                    "endColumn": 194,
+                    "endOffset": 3356
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 194,
+                        "endOffset": 479
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 3361,
+                    "endColumn": 239,
+                    "endOffset": 3596
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 1286,
+                        "endColumn": 239,
+                        "endOffset": 1525
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3601,
+                    "endColumn": 108,
+                    "endOffset": 3705
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 1526,
+                        "endColumn": 104,
+                        "endOffset": 1630
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3710,
+                    "endColumn": 191,
+                    "endOffset": 3897
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 1631,
+                        "endColumn": 191,
+                        "endOffset": 1822
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3902,
+                    "endColumn": 131,
+                    "endOffset": 4029
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 1823,
+                        "endColumn": 127,
+                        "endOffset": 1950
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 4034,
+                    "endColumn": 217,
+                    "endOffset": 4247
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 1951,
+                        "endColumn": 217,
+                        "endOffset": 2168
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 4252,
+                    "endColumn": 178,
+                    "endOffset": 4426
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 2169,
+                        "endColumn": 174,
+                        "endOffset": 2343
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 4431,
+                    "endColumn": 97,
+                    "endOffset": 4524
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 2344,
+                        "endColumn": 93,
+                        "endOffset": 2437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 4529,
+                    "endColumn": 93,
+                    "endOffset": 4618
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 2438,
+                        "endColumn": 89,
+                        "endOffset": 2527
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 4623,
+                    "endColumn": 109,
+                    "endOffset": 4728
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 2528,
+                        "endColumn": 105,
+                        "endOffset": 2633
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 4733,
+                    "endColumn": 118,
+                    "endOffset": 4847
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 308,
+                        "endColumn": 114,
+                        "endOffset": 422
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 4852,
+                    "endColumn": 96,
+                    "endOffset": 4944
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 423,
+                        "endColumn": 92,
+                        "endOffset": 515
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 4949,
+                    "endColumn": 103,
+                    "endOffset": 5048
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 516,
+                        "endColumn": 99,
+                        "endOffset": 615
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 5053,
+                    "endColumn": 105,
+                    "endOffset": 5154
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 616,
+                        "endColumn": 101,
+                        "endOffset": 717
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 5159,
+                    "endColumn": 93,
+                    "endOffset": 5248
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 718,
+                        "endColumn": 89,
+                        "endOffset": 807
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 5253,
+                    "endColumn": 100,
+                    "endOffset": 5349
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 808,
+                        "endColumn": 96,
+                        "endOffset": 904
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 5354,
                     "endColumn": 73,
-                    "endOffset": 2087
+                    "endOffset": 5423
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 905,
+                        "endColumn": 69,
+                        "endOffset": 974
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 5428,
+                    "endColumn": 73,
+                    "endOffset": 5497
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/res/values-vi/values-vi.xml",
@@ -384,11 +859,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 2092,
+                    "startOffset": 5502,
                     "endColumn": 78,
-                    "endOffset": 2166
+                    "endOffset": 5576
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/res/values-vi/values-vi.xml",
@@ -403,11 +878,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 2171,
+                    "startOffset": 5581,
                     "endColumn": 69,
-                    "endOffset": 2236
+                    "endOffset": 5646
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/res/values-vi/values-vi.xml",
@@ -422,11 +897,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 2241,
+                    "startOffset": 5651,
                     "endColumn": 64,
-                    "endOffset": 2301
+                    "endOffset": 5711
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/res/values-vi/values-vi.xml",
@@ -441,11 +916,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 2306,
+                    "startOffset": 5716,
                     "endColumn": 78,
-                    "endOffset": 2380
+                    "endOffset": 5790
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/res/values-vi/values-vi.xml",
@@ -460,11 +935,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 2385,
+                    "startOffset": 5795,
                     "endColumn": 69,
-                    "endOffset": 2450
+                    "endOffset": 5860
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/res/values-vi/values-vi.xml",
@@ -479,11 +954,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 2455,
+                    "startOffset": 5865,
                     "endColumn": 65,
-                    "endOffset": 2516
+                    "endOffset": 5926
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/res/values-vi/values-vi.xml",
@@ -498,11 +973,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 2521,
+                    "startOffset": 5931,
                     "endColumn": 83,
-                    "endOffset": 2600
+                    "endOffset": 6010
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -517,11 +992,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 54,
                     "startColumn": 4,
-                    "startOffset": 2605,
+                    "startOffset": 6015,
                     "endColumn": 100,
-                    "endOffset": 2701
+                    "endOffset": 6111
                 },
                 "from": {
                     "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-vi/values-vi.xml",
@@ -531,6 +1006,44 @@
                         "startOffset": 2102,
                         "endColumn": 100,
                         "endOffset": 2198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 6116,
+                    "endColumn": 135,
+                    "endOffset": 6247
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 975,
+                        "endColumn": 131,
+                        "endOffset": 1106
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 6252,
+                    "endColumn": 90,
+                    "endOffset": 6338
+                },
+                "from": {
+                    "file": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-vi/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 1107,
+                        "endColumn": 86,
+                        "endOffset": 1193
                     }
                 }
             }

@@ -1,7 +1,11 @@
 [
     {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/drawable-xhdpi/splashscreen.png",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xhdpi/splashscreen.png"
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_public.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xhdpi/ic_public.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/drawable-xhdpi/splash_screen.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xhdpi/splash_screen.png"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_action_reload.png",
@@ -24,6 +28,10 @@
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xhdpi/ic_action_search.png"
     },
     {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/drawable-xhdpi/logo.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xhdpi/logo.png"
+    },
+    {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_action_facebook.png",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xhdpi/ic_action_facebook.png"
     },
@@ -38,5 +46,9 @@
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_home.png",
         "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xhdpi/ic_home.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_new.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xhdpi/ic_new.png"
     }
 ]

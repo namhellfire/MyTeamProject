@@ -19,6 +19,7 @@ import com.app.Bigo.API.ConstantAPI;
 import com.app.Bigo.API.ListManager;
 import com.app.Bigo.MainActivity;
 import com.app.Bigo.Model.ListAPI;
+import com.app.Bigo.Model.PreferenceShare;
 import com.app.Bigo.Model.ProfileOffline;
 import com.app.Bigo.R;
 import com.app.Bigo.Utils.UtilConnect;
@@ -104,6 +105,9 @@ public class Splash_screen extends AppCompatActivity {
             if (s != null) {
                 listAPIs = UtilConnect.ParseListAPI(s);
             }
+
+            PreferenceShare share = new PreferenceShare(activity);
+            share.setPreferenceBooleanValue(MainActivity.FIRST_RUN,true);
 
             Handler handler = new Handler();
             final ArrayList<ListAPI> finalListAPIs = listAPIs;

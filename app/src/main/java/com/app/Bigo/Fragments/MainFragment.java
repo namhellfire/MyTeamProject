@@ -12,11 +12,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.OvershootInterpolator;
 
+import com.app.Bigo.API.ListManager;
+import com.app.Bigo.Adapter.OfflineAdapter;
 import com.app.Bigo.Adapter.SpacesItemDecoration;
 import com.app.Bigo.AsyncTask.AsyncOffline;
 import com.app.Bigo.MainActivity;
+import com.app.Bigo.Model.Profile;
 import com.app.Bigo.R;
+
+import java.util.ArrayList;
+
+import jp.wasabeef.recyclerview.adapters.AlphaInAnimationAdapter;
+import jp.wasabeef.recyclerview.animators.SlideInDownAnimator;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,6 +54,8 @@ public class MainFragment extends Fragment {
     public static String ApiUrl;
     private SwipeRefreshLayout swipeRefreshLayout;
     private GridLayoutManager gridLayoutManager;
+    private OfflineAdapter offlineAdapter;
+    private ArrayList<Profile> arrayList;
 
 
     public MainFragment() {
@@ -74,6 +85,9 @@ public class MainFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        arrayList = new ArrayList<>();
+        arrayList = getArguments().getParcelableArrayList(ListManager.DATA_CONTENT);
     }
 
     @Override
@@ -102,15 +116,20 @@ public class MainFragment extends Fragment {
                 refreshList();
             }
         });
+
+        offlineAdapter = new OfflineAdapter(arrayList, getActivity());
+        mListview.setItemAnimator(new SlideInDownAnimator(new OvershootInterpolator(1f)));
+        AlphaInAnimationAdapter alphaInAnimationAdapter = new AlphaInAnimationAdapter(offlineAdapter);
+        mListview.setAdapter(alphaInAnimationAdapter);
+
         Log.d(TAG, "Url api : " + MainActivity.ApiUrl);
-        AsyncOffline asyncOffline = new AsyncOffline(getActivity(), mListview);
-        asyncOffline.execute(MainActivity.ApiUrl);
+
         return v;
     }
 
     public void refreshList() {
         MainActivity ac = (MainActivity) getActivity();
-        ac.loadPageFragment();
+        ac.reLoadPage();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
