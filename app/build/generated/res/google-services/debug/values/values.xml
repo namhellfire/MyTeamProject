@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">977181103712-84qlhq9028u6vt4eopj3m883b7iniuag.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://hot-girl-for-bigo.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">977181103712</string>
+    <string name="google_api_key" translatable="false">AIzaSyB_2PXncDDkr5gYIT0352z3xVjWrtXKhUM</string>
+    <string name="google_app_id" translatable="false">1:977181103712:android:3191be2dd39bbedd</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB_2PXncDDkr5gYIT0352z3xVjWrtXKhUM</string>
+    <string name="google_storage_bucket" translatable="false">hot-girl-for-bigo.appspot.com</string>
+</resources>

@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_reload.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_action_reload.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_eye_open.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_action_eye_open.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_home.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_home.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_youtube.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_action_youtube.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_mail.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_action_mail.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_facebook.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_action_facebook.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_public.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_public.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_no_image.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_no_image.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/logo.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/logo.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/splash_screen.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/splash_screen.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_new.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_new.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_star.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_star.png"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/release/drawable-xxhdpi/ic_action_search.png",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/src/main/res/drawable-xxhdpi/ic_action_search.png"
+    }
+]
