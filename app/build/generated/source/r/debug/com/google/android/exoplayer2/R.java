@@ -24,12 +24,12 @@ public final class R {
 		public static final int exo_media_button_width = 0x7f09007c;
 	}
 	public static final class drawable {
-		public static final int exo_controls_fastforward = 0x7f02006f;
-		public static final int exo_controls_next = 0x7f020070;
-		public static final int exo_controls_pause = 0x7f020071;
-		public static final int exo_controls_play = 0x7f020072;
-		public static final int exo_controls_previous = 0x7f020073;
-		public static final int exo_controls_rewind = 0x7f020074;
+		public static final int exo_controls_fastforward = 0x7f020072;
+		public static final int exo_controls_next = 0x7f020073;
+		public static final int exo_controls_pause = 0x7f020074;
+		public static final int exo_controls_play = 0x7f020075;
+		public static final int exo_controls_previous = 0x7f020076;
+		public static final int exo_controls_rewind = 0x7f020077;
 	}
 	public static final class id {
 		public static final int exo_artwork = 0x7f0f0004;

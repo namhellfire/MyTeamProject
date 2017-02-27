@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "977181103712",
+    "firebase_url": "https://hot-girl-for-bigo.firebaseio.com",
+    "project_id": "hot-girl-for-bigo",
+    "storage_bucket": "hot-girl-for-bigo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977181103712:android:3191be2dd39bbedd",
+        "android_client_info": {
+          "package_name": "com.app.hotgirlforbigo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977181103712-84qlhq9028u6vt4eopj3m883b7iniuag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_2PXncDDkr5gYIT0352z3xVjWrtXKhUM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

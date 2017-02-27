@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:2:1-50:12
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:2:1-64:12
 	package
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:3:5-27
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:3:5-37
 		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
 		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -19,6 +19,11 @@ MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Volumes/Data
 MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.2.0/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.0/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-iid:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.2.0/AndroidManifest.xml:20:5-66
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.6] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.6.6/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:beta:1.2.3] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.2.3/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.15] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.15/AndroidManifest.xml:52:5-67
+MERGED from [com.crashlytics.sdk.android:answers:1.3.11] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.11/AndroidManifest.xml:9:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.3.15] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.15/AndroidManifest.xml:29:5-67
 	android:name
 		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
@@ -34,30 +39,36 @@ MERGED from [com.google.firebase:firebase-iid:10.2.0] /Volumes/Data/Gits/BigoHot
 	android:name
 		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:7:22-76
 application
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:9:5-48:19
-MERGED from [com.android.support:design:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:transition:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:23:5-20
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:9:5-62:19
+MERGED from [com.android.support:design:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:transition:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/transition/25.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.2.0/AndroidManifest.xml:23:5-20
 MERGED from [com.google.firebase:firebase-ads:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-ads/10.2.0/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.2.0/AndroidManifest.xml:23:5-27:19
 MERGED from [com.google.android.gms:play-services-clearcut:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.2.0/AndroidManifest.xml:18:5-19
 MERGED from [com.google.android.gms:play-services-base:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-gass:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.0/AndroidManifest.xml:4:5-19
+MERGED from [com.google.firebase:firebase-core:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-core/10.2.0/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.2.0/AndroidManifest.xml:24:5-33:19
 MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.0/AndroidManifest.xml:24:5-28:19
 MERGED from [com.google.firebase:firebase-iid:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.2.0/AndroidManifest.xml:28:5-50:19
 MERGED from [com.google.firebase:firebase-common:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.2.0/AndroidManifest.xml:4:5-7:19
 MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.0/AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.6] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.6.6/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:beta:1.2.3] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.2.3/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.15] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.15/AndroidManifest.xml:54:5-20
+MERGED from [com.crashlytics.sdk.android:answers:1.3.11] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.11/AndroidManifest.xml:11:5-20
+MERGED from [io.fabric.sdk.android:fabric:1.3.15] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.15/AndroidManifest.xml:31:5-20
 	android:label
 		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:13:9-41
 	android:supportsRtl
@@ -70,8 +81,8 @@ MERGED from [com.android.support:support-compat:25.1.1] /Volumes/Data/Gits/BigoH
 		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:15:9-39
 	android:name
 		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:10:9-47
-activity#com.app.Bigo.MainActivity
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:16:9-24:20
+activity#com.app.hotgirlforbigo.MainActivity
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:16:9-20:59
 	android:label
 		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:19:13-45
 	android:configChanges
@@ -80,88 +91,88 @@ ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:16:9
 		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:20:13-56
 	android:name
 		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:17:13-41
-meta-data#android.app.default_searchable
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:21:13-23:68
-	android:value
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:23:17-65
-	android:name
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:22:17-62
-activity#com.app.Bigo.Activitys.SearchResultsActivity
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:25:9-36:20
+activity#com.app.hotgirlforbigo.Activitys.SearchResultsActivity
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:21:9-29:20
 	android:parentActivityName
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:28:13-55
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:24:13-55
 	android:configChanges
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:27:13-48
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:23:13-48
 	android:theme
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:29:13-44
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:25:13-44
 	android:name
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:26:13-60
-intent-filter#android.intent.action.SEARCH
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:30:13-32:29
-action#android.intent.action.SEARCH
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:31:17-71
-	android:name
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:31:25-68
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:22:13-60
 meta-data#android.app.searchable
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:33:13-35:54
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:26:13-28:54
 	android:resource
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:35:17-51
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:28:17-51
 	android:name
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:34:17-54
-activity#com.app.Bigo.Activitys.Splash_screen
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:37:9-46:20
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:27:17-54
+activity#com.app.hotgirlforbigo.Activitys.Splash_screen
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:30:9-39:20
 	android:screenOrientation
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:39:13-49
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:32:13-49
 	android:theme
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:40:13-44
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:33:13-43
 	android:name
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:38:13-52
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:31:13-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:41:13-45:29
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:42:17-69
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:42:25-66
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:44:17-77
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:44:27-74
-activity#com.app.Bigo.Activitys.PlayerActivity
-ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:47:9-71
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:37:27-74
+activity#com.app.hotgirlforbigo.Activitys.PlayerActivity
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:40:9-62
 	android:name
-		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:47:19-59
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:40:19-59
+meta-data#io.fabric.ApiKey
+ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:42:9-44:72
+	android:value
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:44:13-69
+	android:name
+		ADDED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml:43:13-44
 uses-sdk
 INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:transition:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:transition:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/transition/25.2.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.exoplayer:exoplayer:r2.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/AndroidManifest.xml:21:5-23:41
-MERGED from [com.android.support:cardview-v7:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.2.0/AndroidManifest.xml:20:5-43
 MERGED from [jp.wasabeef:recyclerview-animators:2.2.5] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/jp.wasabeef/recyclerview-animators/2.2.5/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:appcompat-v7:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.2.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.2.0/AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-ads:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-ads/10.2.0/AndroidManifest.xml:4:5-43
+MERGED from [com.wang.avi:library:2.1.3] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.wang.avi/library/2.1.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-ads:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.2.0/AndroidManifest.xml:22:5-43
 MERGED from [com.google.android.gms:play-services-clearcut:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.2.0/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-base:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-gass:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.0/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-core:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-core/10.2.0/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.2.0/AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.0/AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-iid:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.2.0/AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-common:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.2.0/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.0/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.wang.avi:library:2.1.3] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.wang.avi/library/2.1.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.6] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.6.6/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:beta:1.2.3] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.2.3/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.15] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.15/AndroidManifest.xml:50:5-43
+MERGED from [com.crashlytics.sdk.android:answers:1.3.11] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.11/AndroidManifest.xml:7:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.3.15] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.15/AndroidManifest.xml:27:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.1.1] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.2.0] /Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml
 		INJECTED from /Volumes/Data/Gits/BigoHotVideo/app/src/main/AndroidManifest.xml

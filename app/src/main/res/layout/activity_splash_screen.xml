@@ -4,7 +4,7 @@
     android:id="@+id/activity_splash_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.Bigo.Activitys.Splash_screen">
+    tools:context="com.app.hotgirlforbigo.Activitys.Splash_screen">
 
     <ImageView
         android:layout_width="match_parent"

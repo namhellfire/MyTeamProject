@@ -18,11 +18,13 @@
 
     <string name="no_internet">No internet connected</string>
     <string name="check_network">Please check your network</string>
+    <string name="live_ended">Live ended. Please comeback later</string>
 
     <string name="more">MORE</string>
 
     <string name="ion_ios_arrow_right">&#xf3d3;</string>
     <string name="ion_eye">&#xf133;</string>
+    <string name="ion_android_close">&#xf2d7;</string>
 
     <string name="banner_ad_unit_id">ca-app-pub-9233883698624873/6283597944</string>
     <string name="app_id">ca-app-pub-9233883698624873~4806864748</string>

@@ -1,22 +1,18 @@
 [
     {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout-v21/exomedia_default_controls_leanback.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.devbrackets.android/exomedia/3.0.5/res/layout-v21/exomedia_default_controls_leanback.xml"
-    },
-    {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action.xml"
-    },
-    {
-        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_custom_big.xml"
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action_tombstone.xml"
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_icon_group.xml"
+        "source": "/Volumes/Data/Gits/BigoHotVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/layout-v21/notification_template_icon_group.xml"
     }
 ]

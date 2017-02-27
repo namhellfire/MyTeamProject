@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.Bigo.Fragments.Home_fragment">
+    tools:context="com.app.hotgirlforbigo.Fragments.Home_fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <include
